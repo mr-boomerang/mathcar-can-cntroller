@@ -1,0 +1,19 @@
+Hi!!!
+ First go through 'Installtion.txt', 'Readme.txt' and 'Usage.txt' to know how to setup can and its associated modules on the system and run MLC.
+ All the below assumes that can is setup on the PC properly and gateway CAN  is switched ON. If you have not done this I suggest that you read 'Installtion.txt' first.
+ Please note the following four conditions for CAN to work.
+ 1. Neutral Gear in Car
+ 2. No handbrake engaged
+ 3. No brake Pressed nor any of the emergency switches.
+ 4. CAN connected to gateway securely and gateway powered on.
+
+Then the checklist below is to be followed:
+1. 'can0' listed as channel in settings.cfg
+2. start roscore
+3. Run the controller from the scripts folder
+$ ./start_script_mlc.sh
+There are 3 scripts
+start controller  -> start_script_mlc.sh
+start controller with Dataplotter -> start_script_mlc_with_dataplotter.sh
+start controller with keyboard control -> start_script_mlc_with_keyboard.sh
+4. Report any issues.

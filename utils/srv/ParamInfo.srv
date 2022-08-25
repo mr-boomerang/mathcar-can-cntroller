@@ -1,0 +1,7 @@
+# an empty string for "name" lists info for all param o.w. info of the para
+# with name is included.
+string name
+bool full_info # should include full information about param(s)
+string delim # in case multiple
+---
+string info # this will be a string seperated by delim in request.

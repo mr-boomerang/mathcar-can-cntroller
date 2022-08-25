@@ -1,0 +1,107 @@
+Make sure dependencies are installed or present in catkin_workspace
+	- ROS (www.ros.org/)
+	- Wheel Encoder Interface package (available on git server as wheel_encoder_interface.git)
+	- Utils package (available on git server as utils.git)
+	- Pangolin (https://github.com/stevenlovegrove/Pangolin)
+	- USB-CANmodul series generation 3 and 4 driver installed (present in setup folder)
+	- [optional] Doxygen (www.doxygen.org/)
+
+ You will first need to setup the drivers on the system for this purpose.
+
+------------------------------------------------
+Ensure that the kernel option are enabled
+------------------------------------------------
+1. Following kernel options have to be set:
+     CONFIG_CAN=m
+     CONFIG_CAN_RAW=m
+     CONFIG_CAN_BCM=m
+     CONFIG_CAN_DEV=m
+     CONFIG_CAN_CALC_BITTIMING=y
+
+ Those configuration options can be found in /boot/config-*
+ you can get the value of * by
+ 	  $ uname -r
+  this gives you current linux kernel version used.
+
+------------------------------------------------
+Load the driver from the local source directory
+------------------------------------------------
+1. Load basic CAN modules
+      $ sudo modprobe can_raw
+      $ sudo modprobe can_dev
+      $ sudo modprobe can
+
+2. Go inside setup/systec_can directory and run make
+      $ cd setup/systec_can
+      $ make
+
+    Note: In case,you get error with 'can_priv', 'restart_work' and 'schedule_work' in make:
+    Update the the systec_can.c replacing at following line at line no. 847 and 871.
+      LINUX_VERSION_CODE >= KERNEL_VERSION(4, 4, 0)
+      By
+      LINUX_VERSION_CODE >= KERNEL_VERSION(4, 8, 0)
+    It should build now. You should only find this issue on Debian, though.
+		You can use systec_can-V0.9.5.tar.bz2 for Debian.
+    The build on Ubuntu should proceed smoothly.If not then,
+		You can use systec_can-V0.9.4.tar.bz2 for Ubuntu.
+    If it doesn't please do let the maintainer of repository know at the earliest.
+
+3. Load USB-CANmodul driver
+      $ sudo insmod systec_can.ko
+   - OR -
+   Install the driver and firmware system-wide
+      $ sudo make modules_install
+      $ sudo make firmware_install
+
+   Ignore the SSL error.
+   The kernel module should now be loaded automatically when the device is connected.
+
+----------------------------!!!!!!!!ATTENTION!!!!!!!!---------------------------
+----------------------------!!!!!!!!!REQUIRED!!!!!!!!---------------------------
+----------------------------!!!!!!!MANUAL STEPS!!!!!!---------------------------
+4. Create an additional group and add the current user or required user to the group.
+   This is done in order to allow a non sudo user to still use the CAN driver
+   without using sudo password.
+      $ sudo groupadd -g 200 can_group
+      $ sudo adduser $(id -u -n) can_group
+   - OR -
+      $ sudo adduser username can_group
+
+5. Append the following lines to /etc/sudoers using the following commands
+      $ sudo visudo -f /etc/sudoers
+  #-- to add --
+      %can_group   ALL=(ALL:ALL) NOPASSWD: /sbin/ip
+      %can_group   ALL=(ALL:ALL) NOPASSWD: /sbin/modprobe
+
+6. Setup Hardware modules on bootup and auto load on connection. This just ensures device is listed.
+It does not start the device Tx, Rx at a particular bitrate that is still to be done manually only.
+
+  Add the following lines to the /etc/modules file. Please make sure only one entry per line.
+      can
+      vcan
+      can_raw
+      can_dev
+      slcan
+
+  Add the following to /etc/network/interfaces (needs root permission)
+      allow-hotplug can0
+      iface can0 can static
+	       bitrate 500000
+	       up /sbin/ip link set $IFACE down
+	       up /sbin/ip link set $IFACE up txqueuelen 1000 type can bitrate 500000 sample-point 0.7 triple-sampling off restart-ms 500
+
+  Alternatively, the same step can be done only by the following as well, if its needed to be done once.
+  Temporary(one-time):  Commands for getting Virtual CAN up and running
+  For getting virtual CAN up and running:
+      $ sudo modprobe vcan
+      $ sudo ip link add vcan0 type vcan
+      $ sudo ip link set vcan0 up
+  Real
+      $ sudo modprobe can
+      $ sudo modprobe can_dev
+      $ sudo modprobe can_raw
+      $ sudo ip link add can0 type can
+      $ sudo ip link set can0 up type can bitrate 500000
+
+You can also run can_setup.sh with root permissions to repeat steps 1-3, 7.
+      $ ./can_setup.sh -h

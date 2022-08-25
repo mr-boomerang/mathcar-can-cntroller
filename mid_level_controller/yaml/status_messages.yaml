@@ -1,0 +1,147 @@
+diagnostic:
+   message_id: 0x77b
+   message_count: 2
+   total_length: 120
+   start_bit: [56, 56]
+   message_length: [64, 64]
+   validity_bit: [-1, -1]
+   name: ["Diagnostic_Info_Control_Unit","Diagnostic_Info_E2O" ]
+   dictionary_map: [{"None": 0b0}, {"None": 0b0}]
+   topic_names: ["/status/diagnostic"]
+
+driving_mode:
+   message_id: 0x779
+   message_count: 2
+   total_length: 64
+   start_bit: [62, 51]
+   message_length: [2, 5]
+   validity_bit: [-1, -1]
+   name: ["Driving_Mode_Status", "Driving_Gear_Status"]
+   dictionary_map: [{"manual": 0b01, "autonomous": 0b10}, {"reverse": 0b00001, "neutral": 0b00010, "fwddrive": 0b00100, "boost": 0b10000}]
+   topic_names: ["/status/driving_gear"]
+
+driving_lamps:
+   message_id: 0x777
+   message_count: 3
+   total_length: 64
+   start_bit: [60, 57, 54]
+   message_length: [4, 2, 2]
+   validity_bit: [-1, -1, -1]
+   name: ["Driving_Lamp_Turn_Indicator_Status", "Driving_Lamp_Head_Lamp_Status", "Driving_Lamp_Brake_Light_Status"]
+   dictionary_map: [{"right": 0b0001, "left": 0b1000, "hazard": 0b1001, "off": 0b0000}, {"low_Beam": 0b01, "high_Beam": 0b10, "off": 0b00}, {"on": 0b11, "off": 0b00}]
+   topic_names: ["/status/driving_lamps"]
+
+steering:
+   message_id: 0x775
+   message_count: 3
+   total_length: 64
+   start_bit: [58, 56, 54]
+   message_length: [6, 2, 2]
+   validity_bit: [-1, -1, -1]
+   name: ["Steering_Degree_Status", "Steering_Direction_Status", "Steering_Homing_Status"]
+   dictionary_map: [{"max_value": 40}, {"left": 0b10, "right": 0b01}, {"inactive": 0b00,"error": 0b01, "progress": 0b01, "complete": 0b11}]
+   topic_names: ["/status/steering"]
+
+braking:
+   message_id: 0x773
+   message_count: 1
+   total_length: 64
+   start_bit: [57]
+   message_length: [7]
+   validity_bit: [-1]
+   name: ["Braking_Control_Percntg_Status"]
+   dictionary_map: [{"max_value": 100}]
+   topic_names: ["/status/braking"]
+
+acceleration:
+   message_id: 0x771
+   message_count: 1
+   total_length: 64
+   start_bit: [57]
+   message_length: [7]
+   validity_bit: [-1]
+   name: ["Accln_Control_Percntg_Status"]
+   dictionary_map: [{"max_value": 100}]
+   topic_names: ["/status/accelaration"]
+
+accessories:
+   message_id: 0x76E
+   message_count: 2
+   total_length: 64
+   start_bit: [62, 59]
+   message_length: [2, 1]
+   validity_bit: [-1, -1]
+   name: ["Wiper_Status", "Horn_Status"]
+   dictionary_map: [{"off": 0b00, "intermittent": 0b01, "high": 0b10}, {"off": 0b0, "on": 0b1}]
+   topic_names: ["/status/accessories"]
+
+speed:
+   message_id: 0x76C
+   message_count: 1
+   total_length: 64
+   start_bit: [56]
+   message_length: [8]
+   validity_bit: [48]
+   name: ["Vehicle_Speed"]
+   dictionary_map: [{"max_value": 100}]
+   topic_names: ["/status/vehicle_speed"]
+
+driving_mode:
+   message_id: 0x778
+   message_count: 1
+   total_length: 64
+   start_bit: [51]
+   message_length: [5]
+   validity_bit: [50]
+   name: ["Driving_Gear_Control"]
+   dictionary_map: [{"reverse": 0b00001, "neutral": 0b00010, "fwddrive": 0b00100, "boost": 0b10000}]
+
+driving_lamps:
+   message_id: 0x776
+   message_count: 3
+   total_length: 64
+   start_bit: [60, 57, 54]
+   message_length: [4, 2, 2]
+   validity_bit: [59, 56, 53]
+   name: ["Driving_Lamp_Turn_Indicator_Control", "Driving_Lamp_Head_Lamp_Control", "Driving_Lamp_Brake_Light_Control"]
+   dictionary_map: [{"right": 0b0001, "left": 0b1000, "hazard": 0b1001, "off": 0b0000}, {"low_beam": 0b01, "high_beam": 0b10, "off": 0b00}, {"on": 0b11, "off": 0b00}]
+
+steering:
+   message_id: 0x774
+   message_count: 3
+   total_length: 64
+   start_bit: [58, 56, 52]
+   message_length: [6, 2, 2]
+   validity_bit: [55,54,51]
+   name: ["Steering_Degree_Control", "Steering_Direction_Control", "Steering_Homing_Control"]
+   dictionary_map: [{"max_value": 40}, {"left": 0b10, "right": 0b01}, {"homing_active": 0b10}]
+
+braking:
+   message_id: 0x772
+   message_count: 1
+   total_length: 64
+   start_bit: [57]
+   message_length: [7]
+   validity_bit: [56]
+   name: ["Braking_Control_Percntg_Control"]
+   dictionary_map: [{"max_value": 100}]
+
+acceleration:
+   message_id: 0x770
+   message_count: 1
+   total_length: 64
+   start_bit: [57]
+   message_length: [7]
+   validity_bit: [56]
+   name: ["Accln_Control_Percntg_Control"]
+   dictionary_map: [{"max_value": 100}]
+
+accessories:
+   message_id: 0x76D
+   message_count: 2
+   total_length: 64
+   start_bit: [62, 60]
+   message_length: [2, 1]
+   validity_bit: [61,59]
+   name: ["Wiper_Control", "Horn_Control"]
+   dictionary_map: [{"off": 0b00, "intermittent": 0b01, "high": 0b10}, {"off": 0b0, "on": 0b1}]

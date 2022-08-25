@@ -1,0 +1,7 @@
+#pragma once
+
+#define PKG_SRC "@CMAKE_CURRENT_SOURCE_DIR@"
+
+#define PKG_NAME "@PROJECT_NAME@"
+
+#define INPUT_PREFIX "@CMAKE_INSTALL_PREFIX@"

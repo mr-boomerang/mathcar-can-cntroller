@@ -1,0 +1,48 @@
+From 633d871837fab2b671ec11b83b309422e21b9508 Mon Sep 17 00:00:00 2001
+From: Alexander Stein <alexander.stein@systec-electronic.com>
+Date: Wed, 26 Oct 2016 10:13:01 +0200
+Subject: [PATCH 1/1] systec_can: Add support for linux v4.8
+
+Upstream commit 9abefcb1aaa58b9d5aa40a8bb12c87d02415e4c8
+("can: dev: fix deadlock reported after bus-off") changed auto bus-off
+recovery. This is now done using a work queue.
+
+Signed-off-by: Alexander Stein <alexander.stein@systec-electronic.com>
+---
+ systec_can.c | 9 +++++++++
+ 1 file changed, 9 insertions(+)
+
+diff --git a/systec_can.c b/systec_can.c
+index 9587a53..19b5fb2 100644
+--- a/systec_can.c
++++ b/systec_can.c
+@@ -840,7 +840,11 @@ static void systec_handle_status_change(struct systec_can_chan *chan, u32 mod_st
+         case CAN_STATE_BUS_OFF:
+                 /* to ERROR_ACTIVE, ERROR_WARNING, ERROR_PASSIVE */
+                 if (new_state <= CAN_STATE_ERROR_PASSIVE) {
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(4, 8, 0)
++                        schedule_delayed_work(&chan->can.restart_work, jiffies);
++#else
+                         mod_timer(&chan->can.restart_timer, jiffies);
++#endif
+                         netif_wake_queue(chan->netdev);
+                 }
+                 break;
+@@ -861,9 +865,14 @@ static void systec_handle_status_change(struct systec_can_chan *chan, u32 mod_st
+                 chan->can.can_stats.bus_off++;
+ 
+                 if (chan->can.restart_ms) {
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(4, 8, 0)
++                        schedule_delayed_work(&chan->can.restart_work,
++                                              msecs_to_jiffies(chan->can.restart_ms));
++#else
+                         /* schedule channel restart (will call can.do_set_mode) */
+                         mod_timer(&chan->can.restart_timer,
+                                 jiffies + msecs_to_jiffies(chan->can.restart_ms));
++#endif
+                 }
+ 
+         default:
+-- 
+2.7.3
+

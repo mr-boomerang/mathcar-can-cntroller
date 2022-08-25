@@ -1,0 +1,9 @@
+driving_mode:
+   message_id: 0x778
+   message_count: 1
+   total_length: 64
+   start_bit: [51]
+   message_length: [5]
+   validity_bit: [50]
+   name: ["Driving_Gear_Control"]
+   dictionary_map: [{"reverse": 0b00001, "neutral": 0b00010, "fwddrive": 0b00100, "boost": 0b10000}]

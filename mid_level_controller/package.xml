@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<package>
+  <name>mid_level_controller</name>
+  <version>0.0.1</version>
+  <description>The can package, vehicle speed control</description>
+
+  <maintainer email="dggoel@mathworks.in">Divyanshu Goel</maintainer>
+
+  <license>BSD</license>
+
+  <author email="dggoel@mathworks.in">Divyanshu Goel</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>roscpp</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>message_generation</build_depend>
+  <build_depend>joystick</build_depend>
+  <build_depend>utils</build_depend>
+  <build_depend>roslint</build_depend>
+
+
+  <run_depend>roscpp</run_depend>
+  <run_depend>std_msgs</run_depend>
+  <run_depend>message_runtime</run_depend>
+  <run_depend>joystick</run_depend>
+  <run_depend>utils</run_depend>
+
+  <export>
+    <rosbag migration_rule_file="migration_rules/Joy.bmr"/>
+  </export>
+</package>

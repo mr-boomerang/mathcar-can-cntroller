@@ -1,0 +1,10 @@
+*.swp
+*.swo
+*~
+build
+.ycm_extra_conf*
+include/input/config.h
+include/swahana_master/config.h
+.tags
+tags
+*.pyc

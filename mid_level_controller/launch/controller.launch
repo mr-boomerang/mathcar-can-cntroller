@@ -1,0 +1,12 @@
+<launch>
+    <!-- Start Can Driver manager -->
+      <arg name="inputs_file_path" default="control_messages.yaml"/>
+      <arg name="status_file_path" default="status_messages.yaml"/>
+      <arg name="log_file_path" default="$(find mid_level_controller)/logs/"/>
+      <arg name="settings_file_path" default="settings_default.cfg"/>
+
+      <node name="mid_level_controller" pkg="mid_level_controller" type="mid_level_controller_node" args="--control_yaml_file_path $(arg inputs_file_path) --log_path $(arg log_file_path) --cfg $(arg settings_file_path) --status_yaml_file_path $(arg status_file_path)" required="true" output="screen" >
+      </node>
+
+      <node name="dataplotter" pkg="mid_level_controller" type="dataplotter" required="false" output="screen" ></node>
+</launch>

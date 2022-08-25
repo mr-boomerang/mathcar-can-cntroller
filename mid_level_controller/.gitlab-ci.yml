@@ -1,0 +1,55 @@
+before_script:
+- export PATH=$PATH:/opt/ros/kinetic/bin
+- source /opt/ros/kinetic/setup.bash
+- echo $PATH
+- pwd
+- which ssh-agent 
+
+ # run ssh-agent
+- eval $(ssh-agent -s)
+
+#add identity
+- ssh-add <(echo "$hyd_00_integ") 
+
+
+stages:
+ # - cpplint
+  - roslint
+  - compile_run
+  
+#check_static_code:
+#  stage: cpplint
+#  script: 
+#    - pwd
+#    - cd /local/ThirdPartySoftware/cpplint
+#   - ./cpplint.py  --recursive /local/builds/0d1aeaf6/0/Swahana/mid_level_controller/src --quiet
+
+
+
+roslint_check:
+  stage: roslint
+  script:
+    - cd /opt/ros/swahana
+    - rm -rf src/mid_level_controller
+    - cp -r /local/builds/0d1aeaf6/0/Swahana/mid_level_controller src/
+    - catkin_make roslint_mid_level_controller
+
+
+job1:
+  stage: compile_run
+  script:
+  - pwd
+  - cd /opt/ros/swahana
+  #- rm build/CMakeCache.txt
+ 
+  #- cd src
+  #- git clone git@insidelabs-git.mathworks.com:Swahana/utils.git
+  #- git clone git@insidelabs-git.mathworks.com:Swahana/Occupancy_grid.git
+  #- cd ..
+  - catkin_make -DUTILS_GUI=OFF -Dgflags_DIR=/local/ThirdPartySoftware/gflags/build -DOpenCV_DIR=/opt/ros/kinetic/share/OpenCV-3.3.1
+  #- catkin_make -DRECORD_VIDEO=ON
+  - source devel/setup.bash
+  - roslaunch mid_level_controller controller.launch __name:=MLC &
+  - sleep 140
+  - rosnode kill MLC
+  - rosnode list

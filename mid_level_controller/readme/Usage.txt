@@ -1,0 +1,255 @@
+Hi!!!
+ First go through 'Installtion.txt' and 'Readme.txt' to know how to setup can and its associated modules on the system.
+ All the below assumes that can is setup and car CAN  is switched ON.
+ Please note the following four conditions for CAN to work.
+ 1. Neutral Gear in Car
+ 2. No handbrake engaged
+ 3. No brake Pressed nor any of the emergency switches.
+ 4. CAN connected to gateway and gateway powered on.
+
+Message Format
+---------------
+
+All messages are 64 bits in big endian format (motorola specified).
+All functions return a 64 bit message in a byte array of size 8 that is in direct can message format
+
+----------------------------------------
+ROS Topics and Inputs,outputs
+----------------------------------------
+
+Associated Topics:
+	/canControl -> topic to control gateway.
+	/canStatus -> topic to get feedback from gateway can.
+	/velocitySteeringAngle -> topic to get velocity and steer input from planner.
+	/joy -> Joystick node in case you do joystick control.
+	/canVehicleStatus -> topic to get feedback from vehicle can.
+
+----------------------------!!!!!!!!ATTENTION!!!!!!!!---------------------------
+----------------------------!!!!!!!!!REQUIRED!!!!!!!!---------------------------
+----------------------------!!!!!!!MANUAL STEPS!!!!!!---------------------------
+
+1. Ensure settings are listed properly in can_settings.cfg.
+   Specially, you can use the root password directly or the bypass method to allows you to directly access the can device. You have to choose one of these options.
+   The ~/.canrc in home folder contains device name for the appropriate mode [vcan0 , can0, can1] for use with the checking the can incoming packets. This file can be found inside setup folder as 'can_real.conf'.
+   There is log file stored in a logs folder as per config in can_settings.cfg for the messages received over can.
+   Log file Format:
+   [TimeStamp] [Arbitration ID] [DLC] [Data]
+   Please note that integer data is stored, not hexadecimal. Wherever hexadecimal is used it is prefixed by '0x'
+   See Additional notes below for more Info on settings of can_settings.cfg.
+
+2. Ensure settings are listed properly in controller_settings.cfg. This file contains parameters for the controller settings like gain for PD controller, velocity limits, steering limits.
+   This file also contains setting for a watchdog which ensures that the system shuts down if there is no feedback for 40 ms or no input from planner for 75 ms. If doing a trial run you can simply switch it off in the config.
+   More details in Additional notes.
+
+3. Run the following command if not already done so.
+   You can also edit sudo password in can settings file to automate the process when can is connected to the hardware:
+	   $ sudo ip link set can0 up type can bitrate 500000
+
+   Ensure that you have a can0 listing. You can check this by following command.
+	   $ ip link
+
+     You need to build the mid_level_controller package.
+     Navigate to catkin_workspace
+	       $ cd ~/catkin_ws
+     Run catkin_make
+	       $ catkin_make --pkg mid_level_controller
+     Source the setup.bash file
+	       $ . ./devel/setup.bash
+
+   In case there is no 'can0' listing go through installation.txt to setup the can device
+
+4. Now there are a couple of things:
+    1. To run car using a keyboard or a XBOX 360 wired controller (USB).
+    2. To start velocity controller.
+[optional]
+    3. To run car directly using commands.
+    4. To start vehicle can logging.
+    5. Update the parameters for PID brake and throttle at run-time .
+  Each of these is detailed below:
+
+  1. To run car using Keyboard.
+     Run the launch file for publishing assuming you have sourced the catkin_workspace in each terminal properly
+     - Start the can transmitter, receiver and controller.
+ 	         $ roslaunch mid_level_controller controller.launch
+     - Start keyboard controller or joystick controller
+  	       $ roslaunch mid_level_controller teleop_car.launch mode:=keyboard
+        - OR -
+ 	         $ roslaunch mid_level_controller teleop_car.launch mode:=joy
+
+  2. To start the velocity controller
+     - Start the wheel encoder interface next
+        $ roslaunch wheel_encoder_interface car_sensor.launch
+     - Start the can transmitter, receiver and controller.
+        $ roslaunch mid_level_controller controller.launch
+     - In another tab type publish to topic /velocitySteeringAngle which is of type geometry_msgs/Twist to give steering and speed data to controller
+        linear.x -> speed in mps
+        angular.z-> steering
+       	   $ rostopic pub -1 /velocitySteeringAngle 'geometry_msgs/Twist' 'linear: x: 0 y: 0 z: 0 angular: x: 0 y: 0 z: 0'
+        The input unit is in mps or as specified in the controller_settings file under yaml folder.
+
+  3. To run car directly using commands.
+     - Run the launch file for publishing assuming you have sourced the catkin_workspace properly
+  - Start the can transmitter, receiver and controller.
+     $ roslaunch mid_level_controller controller.launch disable_controller:=true
+
+  To send a specific message to certain topic start at new terminal
+  Navigate to ros folder
+  	$ cd catkin_ws
+  Source the bash file
+ 	 $ . ./ devel/setup.bash
+
+Format:
+	$  rostopic pub -1 /canControl/ mid_level_controller/Callback_Msg 'topic_name' 'message_data'
+for example:
+
+	$ rostopic pub -1 /canControl/ mid_level_controller/Callback_Msg 'Driving_Gear_Control' "'neutral'"
+
+For Control:
+  To send a new signal on can use the /canControl topic which has the following format
+	   # string topic_name     # Topic to which data is written
+	   # string message_data   # What data is to be wriiten
+
+  Where valid values are :
+	 acceleration
+		topic_name : Accln_Control_Percntg_Control
+		message_data : [Max_Value --> 100]
+	 accessories
+		topic_name : Wiper_Control
+		message_data : ['high', 'off', 'intermittent']
+	 accessories
+		topic_name : Horn_Control
+		message_data : ['on', 'off']
+	 braking
+		topic_name : Braking_Control_Percntg_Control
+		message_data : [Max_Value --> 100]
+	 driving_lamps
+		topic_name : Driving_Lamp_Turn_Indicator_Control
+		message_data : ['right', 'off', 'hazard', 'left']
+	 driving_lamps
+		topic_name : Driving_Lamp_Head_Lamp_Control
+		message_data : ['low_Beam', 'high_Beam', 'off']
+	 driving_lamps
+		topic_name : Driving_Lamp_Brake_Light_Control
+		message_data : ['on', 'off']
+ 	driving_mode
+		topic_name : Driving_Gear_Control
+		message_data : ['reverse', 'neutral','fwddrive','boost']
+	 steering
+		topic_name : Steering_Degree_Control
+		message_data : [Max_Value --> 40]
+	 steering
+		topic_name : Steering_Direction_Control
+		message_data : ['right', 'left']
+	 steering
+		topic_name : Steering_Homing_Control
+		message_data : ['homing_active']
+
+The valid values are also shown when you run the launch file in the terminal itself.
+Also Invalid is always an option to set the valid bit to zero.
+
+For Status:
+/canStatus/
+	 # topic - array of names of all feedback data
+	 # value - array of values of all feedback data
+	 # raw_data - array of raw can message received or feedback.
+
+4. Start vehicle can Logging
+   - Ensure the can device is connected properly. Then start can_receiver_vehicle.
+     $ roslaunch mid_level_controller can_receiver_vechicle.launch
+   - You can see the incoming data on /canVehicleStatus
+     $ rostopic echo /canVehicleStatus
+
+Besides this the data is also logged inside the log folder as yyyy_mm_dd_rx_vehicle_can.dat .
+Please note only logging exists as of now(2017-08-03) as we don't have knowledge what data means.
+Log file Format:
+[TimeStamp] [Arbitration ID] [DLC] [Data]
+Please note that integer data is stored, not hexadecimal. Wherever hexadecimal is used it is prefixed by '0x'
+
+To Record data:
+    To record data run (assuming wheel encoder, gps, imu are runnning otherwise remove the associated topics):
+        $ rosbag record /canControl /canStatus /wheelEnc/left /wheelEnc/right /imu/data /gps/fix
+
+5. Update the parameters for PID brake and throttle at run-time .
+    You can update the value for the gains at run-time by calling
+      $ rosservice call /mid_level_controller/params_server/set "name: 'throttle_ki'
+value: '12.01'"
+
+
+----------------------------------------
+Additional Notes
+----------------------------------------
+
+In case you need to see the data being sent, set the raw_msg_tx_enable to true in settings.cfg under cfg folder.
+
+[-] means-> not configurable or useless to configure
+
+Parameters for settings.cfg under cfg folder:
+default:
+  can_channel: [vcan0,can0,can1] - choose vcan or can for gateway can
+  sudo_passwd: [YOUR SUDO PASSWORD] root password if left empty assumes commands do not require sudo password. For more deatils read below.
+
+There are two modes to sudo_passwd:
+If its empty an assumption is made that group by the name can_group exists in system and the current user is added to the group, (information on how to do this is in installation.txt) and this group is added in sudoers file to execute programs(/sbin/ip, /sbin/modprobe) with anyone belonging to the group without access to password.
+If its not empty then the account needs to have sudo permission and then you can directly run the code. This doesn't make any assumptions about system apart from sudo access.
+
+  raw_msg_rx_enable: [true,false] [enable display of messages for receiver]
+  raw_msg_tx_enable: [true,false] [enable display of messages for transmitter]
+  log_enable: [true,false] [enable logging of CAN messages]
+  log_data_rx_enable: [true,false] [enable logging of data messages for receiver]
+  log_data_tx_enable: [true,false] [enable logging of data messages for transmitter]
+  debug_msg_rx_enable: [true,false] [enable printing of debug messages for receiver]
+  debug_msg_tx_enable: [true,false] [enable printing of debug messages for transmitter]
+  debug_msg_enable: [true, false] [enable printing of debug messages for mid level controller]
+  throttle_kp: 6 [Value for Kp gain of throttle press]
+  throttle_ki: 0 [Value for Ki gain of throttle press]
+  throttle_kd: 3 [Value for Kd gain of throttle press]
+  brake_kp: 12 [Value for Kp gain of brake press]
+  brake_ki: 0 [Value for Ki gain of brake press]
+  brake_kd: 2 [Value for Kd gain of brake press]
+  #advanced, usually not needed to be touched
+  vel_limit: 5 [velocity limit in above units absolute max. 5.5 mps]
+  steer_limit: .687 [steering limit in above units absolute max 0.7 radians]
+  velocity_input_units: [mps, kmph] [units for velocity]
+  steer_input_units: [degrees,radian] [steering units]
+  steer_dir_multiplier: [-1,1] [steer direction]
+  throttle_limit: 60 [soft throttle limit]
+  brake_limit: 88 [Brake pedal value limit]
+  brake_mode: [regular, alternate] [Gives faster but jerky braking in alternate mode.]
+  brake_multiplier: 33 [Multiplier in case of alternate braking.]
+  ros_topics_publish: [true, false] [to publish to ros topic or not]
+  controller_type: [lookup, pid] [type of controller for velocity control]
+  slope_input_enabled: [true, false] [to take slope input into account as well, you need to provide topic as well]
+  slope_topic:  slope [data should come on this rostopic format is float64]
+  encoder_resolution: .002108 [resolution of encoder]
+  encoder_units: [m, mm] [units for encoder feedback]
+  control_intermediate_trajectory_mode: [sin, cycloidal, step, ramp] [choose type of intermediate trajectory for velocity input from joystick]
+  trajectory_followed: [true, false] [enable following of trajectory for velocity input from joystick]
+  total_time: 1 [the time for intern=mediate trajectory curve]
+  controller_feedback_source: [gateway,encoder] [select source for controller feedback source] [-]
+  input_control_mode: [controller, throttle] [ select mode of operation for keyboard input controller or throttle]
+  watch_dog_planner_enable: [true, false] [enables watch dog timer for planner feedback at 75 ms]
+  watch_dog_feedback_speed_enable: [true, false] [enables watch dog timer for speed feedback at 40 ms]
+  watch_dog_feedback_slope_enable: [true, false] [enables watch dog timer for slope feedback at 40 ms]
+  allow_pid_update: [true, false] [for allowing pid update]
+  print_help: [true, false] [Print help]
+
+To record data run :
+	$ rosbag record /canControl /canStatus /velocitySteeringAngle
+
+----------------------------------------
+Error Codes/Known Issues
+----------------------------------------
+Busheavy:
+  - It can occur when you want to send a CAN-message and no other CAN-node is able to send a acknowlegde frame
+  	(wrong baudrate, CAN-bus not connected, no CAN-termination resistor, a CAN-bus system with only one CAN-node etc.)
+  - No Log file generated:
+  	Check the options in the can settings file and if they are set check the connection by
+        $ ip link
+  	if it not listed then start the connection by going through details in the installation.txt
+More details at http://www.peak-system.com/forum/viewtopic.php?f=120&t=39
+  - Please make sure that device is connected before starting to send the messages else program will shutdown.
+  - During build Ignore SSL error.
+  - Bad Blocks error when running vehicle can launch file
+  	Simply start the launch file again.
+Device disconnecting despite connection:
+  - Please Ensure that device is kept in an EMI free environment. This is due to interference from the power and fan like devices.

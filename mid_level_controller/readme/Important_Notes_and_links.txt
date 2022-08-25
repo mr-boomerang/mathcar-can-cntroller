@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<tagfile>
+Hi!
+ First go through Installtion.md to know how to setup can and its associated modules on the system.
+
+Message Format
+---------------
+
+All messages are 64 bits in Big Endian format (motorola specified).
+All functions return a 64 bit message in a byte array of size 8 that is in direct can message format
+
+###################################
+#**Ros Topics and Inputs,outputs**#
+###################################
+First Ensure all settings are listed in can_settings.yaml
+and the ~/.canrc in home folder contains device name for the appropriate mode[vcan0 , can0].
+
+First run the following command:
+$ sudo ip link set can0 up type can bitrate 500000
+when can is cannected to setup the hardware.
+
+You need to build the package first , ensure that you have a can0 listing in
+$ ip link
+Now navigate to catkin_workspace
+$ cd ~/catkin_ws
+Run catkin_make
+$ catkin_make --pkg can_driver
+Source the setup.bash file
+$ . ./devel/setup.bash
+Run the launch file for publishing assuming you have sourced the catkin_workspace properly
+$ roslaunch can_driver can_transmitter.launch
+
+To send a message to certain topic start at new terminal
+Navigate to ros folder
+$ cd catkin_ws
+Source the bash file
+$ . ./ devel/setup.bash
+
+$ rostopic pub -1 /can/control can_driver/Callback_Msg 'topic_name' 'message_data'
+for example:
+
+$ rostopic pub -1 /can/control can_driver/Callback_Msg 'Accln_Control_Percntg_Control' "'100'"
+
+To send a new signal on can use the /can/control  topic which has the following format
+	string topic_name   # Topic to which data is written
+	string message_data   # What data is to be wriiten
+where valid values are :
+	 acceleration
+		topic_name : Accln_Control_Percntg_Control
+		message_data : [Max_Value --> 100, 'invalid']
+	 accessories
+		topic_name : Wiper_Control
+		message_data : ['high', 'off', 'intermittent', 'invalid']
+	 accessories
+		topic_name : Horn_Control
+		message_data : ['on', 'off', 'invalid']
+	 braking
+		topic_name : Braking_Control_Percntg_Control
+		message_data : [Max_Value --> 100, 'invalid']
+	 driving_lamps
+		topic_name : Driving_Lamp_Turn_Indicator_Control
+		message_data : ['right', 'off', 'hazard', 'left', 'invalid']
+	 driving_lamps
+		topic_name : Driving_Lamp_Head_Lamp_Control
+		message_data : ['low_Beam', 'high_Beam', 'off', 'invalid']
+	 driving_lamps
+		topic_name : Driving_Lamp_Brake_Light_Control
+		message_data : ['on', 'off', 'invalid']
+ 	driving_mode
+		topic_name : Driving_Gear_Control
+		message_data : ['reverse', 'neutral','fwddrive','boost', 'invalid']
+	 steering
+		topic_name : Steering_Degree_Control
+		message_data : [Max_Value --> 40, 'invalid']
+	 steering
+		topic_name : Steering_Direction_Control
+		message_data : ['right', 'left', 'invalid']
+	 steering
+		topic_name : Steering_Homing_Control
+		message_data : ['homing_active', 'invalid']
+
+The valid values are also shown when you run the launch file in the terminal itself.
+Also Invalid is always an option to set the valid bit to zero.
+
+For Status:
+/can/status/
+	/can_msg --> Incoming message packet
+	/acceleration_control_status --> status of accelaration percentage 0-100
+	/accessories_control_status --> status of accelaration percentage 0-100
+	/braking_control_status --> status of acce`laration percentage 0-100
+	/diagnostic_messages --> status of accelaration percentage 0-100
+	/diagnostic_messages_E2O --> status of accelaration percentage 0-100
+	/driving_lamp_status --> status of all the lamps head, turn indicator, brake;
+	/driving_mode_status --> status of driving mode and gear; reverse,neutral,drive,park,boost
+	/steering_status --> left,right / 0-40 degree limit
+
+Log file Format:
+[TimeStamp] [Arbitration ID] [DLC] [Data]
+Please note that integar data is stored. wherever hexadecimal is used it is preappended by '0x'
+###########################
+#*Error Codes/Known Issues#
+###########################
+ Busheavy:
+	It can occur when you want to send a CAN-message and no other CAN-node is able to send a acknowlegde frame
+	(wrong baudrate, CAN-bus not connected, no CAN-termination resistor, a CAN-bus system with only one CAN-node etc.)
+ No Log file generated:
+	Check the options in the can settings file and if they are set check the connection by
+$ip link
+	if it not listed start the connection by going through the installation readme
+More details at http://www.peak-system.com/forum/viewtopic.php?f=120&t=39
+
+
+###########################
+#Additinal Notes#
+##########################
+Incase you need to see the data being sent, set the raw_msg_enable to true in can_settings.txt under yaml folder
+
+
+Run basic tests
+----------------
+
+1. Connect the USB-CANmodul to the PC
+
+Note: Some of the following commands require the capability CAP_NET_ADMIN.
+      So those commands should be executed as root (e.g. via sudo).
+
+2. Set bitrate to 500kBit/s
+
+$ ip link set can0 type can bitrate 500000
+- OR if CONFIG_CAN_CALC_BITTIMING is undefined -
+$ ip link set can0 type can tq 500 prop-seg 6 phase-seg1 7 phase-seg2 2
+
+3. Start up the CAN interface
+
+$ ip link set can0 up
+
+4. Transmit one CAN frame
+
+$ cd can-utils
+$ ./cangen -n 1 -I 640 -L 8 -D 4000100000000000 can0
+
+5. Print out some statistics
+
+$ ip -details -statistics link show can0
+
+6. Restart CAN channel manually in case of bus-off (i.e. short circuit)
+
+$ ip link set can0 type can restart
+
+Automatically restart the CAN channel 1000 ms after bus-off occurs
+
+$ ip link set can0 type can restart-ms 1000
+
+7. Increase the transmit queue length from default value 10 to 1000.
+   10 is the size of one CAN message.
+
+$ ip link set can0 txqueuelen 1000
+
+You can look at readme inside systec_can folder for more details.
+
+</tagfile>

@@ -1,0 +1,8 @@
+<launch>
+    <!-- Start Can Driver manager -->
+      <arg name="inputs_file_path" default="$(find mid_level_controller)/yaml/status_messages.yaml"/>
+      <arg name="log_file_path" default="$(find mid_level_controller)/logs/"/>
+      <arg name="can_settings_file_path" default="$(find mid_level_controller)/cfg/can_settings_deafult.cfg"/>
+      <node name="can_receiver_vehicle" pkg="mid_level_controller" type="can_receiver_vehicle" args="$(arg inputs_file_path) $(arg log_file_path) $(arg can_settings_file_path)" required="true" output="screen" >
+      </node>
+</launch>

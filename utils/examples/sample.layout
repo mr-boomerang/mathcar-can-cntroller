@@ -1,0 +1,35 @@
+# This is a comment. If first non-space character is # then it's considered a
+# comment. A hash coming after view name, bounds, layout parent won't be
+# considered a comment and would cause a parsing error.
+# Following line defines a view.
+# <name>: <type> [<bounds>] [<layout>] [<parent>]
+# Definitions:
+# 	<name> 		- Could be any arbitary string
+#       <type> 		- Container or 2d or 3d
+# 	<layout> 	- equal or equalhoriz or equalvert or overlay or horiz
+# 			  or vert. Should be encompassed in {}.
+# 	<parent> 	- Empty string means parent is base view, o.w. any name
+# 			  already mentioned in the layout. Should be encompassed
+# 			  in [].
+# 	<bounds> 	- Order for View bounds is bottom, top, left, right.
+# 			  Should be encompassed in ().
+# 	bound elems 	- [bottom | top | left | right] can be float or integer,
+# 			  if window bounds are 0 to 1 then float will specify
+# 			  the relative location in window, if window resizes
+# 			  the view will as well.
+# 			  if window bounds are 0 to pixel size then value should
+# 			  be int, this is absolute value, resizing of window
+# 			  won't change view size.
+# 			  All elems are independent, one could be float other
+# 			  int.
+
+Graph: container (0,0.66,0,0.66) {equalhoriz}
+view2d_1: 2d [Graph]
+Main: container (0,0.66,0.66,1.0) {equalhoriz}
+view2d_5: 2d [Main]
+view_panel: container (0.66, 1.0, 0.0, 1.0) {equalhoriz}
+view2d_2: 2d [view_panel]
+view2d_3: 2d [view_panel]
+view2d_4: 2d [view_panel]
+view3d_1: 3d [view_panel]
+view2d_6: 2d [view_panel]

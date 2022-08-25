@@ -1,0 +1,15 @@
+Frame origin taken to be mid point of front axle on the body.
+The inputs for the package are defined below on the topic velocitySteeringAngle
+steering:
+  Units: radians
+  Resolution: .001
+  Limits: +/- 0.687
+  Configuration: +ve value is taken for left direction for a driver sitting in the car facing front.
+                 -ve value is taken for right direction for a driver sitting in the car facing front.
+
+Speed:
+  Units: meters per second
+  Resolution: .277
+  Limits: +/- 5 (as defined in config file, absolute limit 5.5 mps)
+  Configuration: +ve value is taken for forward for a driver sitting in the car facing front.
+                 -ve value is taken for reverse for a driver sitting in the car facing front. 

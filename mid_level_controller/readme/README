@@ -1,0 +1,2172 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<tagfile>
+  <compound kind="file">
+    <name>can_bus.hpp</name>
+    <path>/mathworks/home/dggoel/catkin_ws/src/swahana/mid_level_controller/include/can_driver/</path>
+    <filename>can__bus_8hpp</filename>
+    <includes id="can__bus_8hpp" name="can_bus.hpp" local="yes" imported="no">can_bus.hpp</includes>
+    <includes id="logger_8hpp" name="logger.hpp" local="yes" imported="no">logger.hpp</includes>
+    <class kind="class">can_bus</class>
+  </compound>
+  <compound kind="file">
+    <name>can_receiver.hpp</name>
+    <path>/mathworks/home/dggoel/catkin_ws/src/swahana/mid_level_controller/include/can_driver/</path>
+    <filename>can__receiver_8hpp</filename>
+    <includes id="can__bus_8hpp" name="can_bus.hpp" local="yes" imported="no">can_bus.hpp</includes>
+    <includes id="can__yaml__parser_8hpp" name="can_yaml_parser.hpp" local="no" imported="no">can_driver/can_yaml_parser.hpp</includes>
+    <class kind="struct">can_topics_data_map</class>
+    <class kind="struct">input_particulars_map</class>
+    <class kind="struct">output_msg</class>
+    <class kind="class">can_receiver</class>
+    <member kind="function">
+      <type>void</type>
+      <name>mysignalHandler</name>
+      <anchorfile>can__receiver_8hpp.html</anchorfile>
+      <anchor>a6800092c2405cae650216b5a87c48f86</anchor>
+      <arglist>(int signum)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>can_settings_reader.hpp</name>
+    <path>/mathworks/home/dggoel/catkin_ws/src/swahana/mid_level_controller/include/can_driver/</path>
+    <filename>can__settings__reader_8hpp</filename>
+    <class kind="struct">can_settings</class>
+    <class kind="class">can_settings_reader</class>
+  </compound>
+  <compound kind="file">
+    <name>can_transmitter.hpp</name>
+    <path>/mathworks/home/dggoel/catkin_ws/src/swahana/mid_level_controller/include/can_driver/</path>
+    <filename>can__transmitter_8hpp</filename>
+    <includes id="can__transmitter_8hpp" name="can_transmitter.hpp" local="yes" imported="no">can_transmitter.hpp</includes>
+    <includes id="can__bus_8hpp" name="can_bus.hpp" local="yes" imported="no">can_bus.hpp</includes>
+    <includes id="can__yaml__parser_8hpp" name="can_yaml_parser.hpp" local="no" imported="no">can_driver/can_yaml_parser.hpp</includes>
+    <class kind="struct">can_topics_data_map</class>
+    <class kind="class">can_transmitter</class>
+    <member kind="define">
+      <type>#define</type>
+      <name>PROGNAME</name>
+      <anchorfile>can__transmitter_8hpp.html</anchorfile>
+      <anchor>a8c9afb758de9a0355c93fc926b8ce6b1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>VERSION</name>
+      <anchorfile>can__transmitter_8hpp.html</anchorfile>
+      <anchor>a1c6d5de492ac61ad29aec7aa9a436bbf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>mysignalHandler</name>
+      <anchorfile>can__transmitter_8hpp.html</anchorfile>
+      <anchor>a6800092c2405cae650216b5a87c48f86</anchor>
+      <arglist>(int signum)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>can_yaml_parser.hpp</name>
+    <path>/mathworks/home/dggoel/catkin_ws/src/swahana/mid_level_controller/include/can_driver/</path>
+    <filename>can__yaml__parser_8hpp</filename>
+    <class kind="struct">dictionary_map</class>
+    <class kind="struct">can_message</class>
+    <class kind="class">can_yaml_parser</class>
+  </compound>
+  <compound kind="file">
+    <name>logger.hpp</name>
+    <path>/mathworks/home/dggoel/catkin_ws/src/swahana/mid_level_controller/include/can_driver/</path>
+    <filename>logger_8hpp</filename>
+    <class kind="class">logger</class>
+  </compound>
+  <compound kind="file">
+    <name>controller_settings_reader.hpp</name>
+    <path>/mathworks/home/dggoel/catkin_ws/src/swahana/mid_level_controller/include/controller/</path>
+    <filename>controller__settings__reader_8hpp</filename>
+    <class kind="struct">controller_settings</class>
+    <class kind="class">controller_settings_reader</class>
+  </compound>
+  <compound kind="file">
+    <name>mm_controller.hpp</name>
+    <path>/mathworks/home/dggoel/catkin_ws/src/swahana/mid_level_controller/include/controller/</path>
+    <filename>mm__controller_8hpp</filename>
+    <class kind="class">mm_controller</class>
+    <member kind="define">
+      <type>#define</type>
+      <name>PI</name>
+      <anchorfile>mm__controller_8hpp.html</anchorfile>
+      <anchor>a598a3330b3c21701223ee0ca14316eca</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>unsigned long long</type>
+      <name>timestamp_t</name>
+      <anchorfile>mm__controller_8hpp.html</anchorfile>
+      <anchor>a29217083807c6b153656eda1a04f306d</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>joy_interface.hpp</name>
+    <path>/mathworks/home/dggoel/catkin_ws/src/swahana/mid_level_controller/include/interfaces/</path>
+    <filename>joy__interface_8hpp</filename>
+    <class kind="class">joy_interface</class>
+    <member kind="define">
+      <type>#define</type>
+      <name>PI</name>
+      <anchorfile>joy__interface_8hpp.html</anchorfile>
+      <anchor>a598a3330b3c21701223ee0ca14316eca</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>unsigned long long</type>
+      <name>timestamp_t</name>
+      <anchorfile>joy__interface_8hpp.html</anchorfile>
+      <anchor>a29217083807c6b153656eda1a04f306d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>mysignalHandler</name>
+      <anchorfile>joy__interface_8hpp.html</anchorfile>
+      <anchor>a6800092c2405cae650216b5a87c48f86</anchor>
+      <arglist>(int signum)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>keyboard_interface.hpp</name>
+    <path>/mathworks/home/dggoel/catkin_ws/src/swahana/mid_level_controller/include/interfaces/</path>
+    <filename>keyboard__interface_8hpp</filename>
+    <class kind="class">keyboard_interface</class>
+    <member kind="define">
+      <type>#define</type>
+      <name>KEYCODE_W</name>
+      <anchorfile>keyboard__interface_8hpp.html</anchorfile>
+      <anchor>a6a44fd7e61a3f73fffecd1ec5973f819</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>can_bus.cpp</name>
+    <path>/mathworks/home/dggoel/catkin_ws/src/swahana/mid_level_controller/src/can_driver/</path>
+    <filename>can__bus_8cpp</filename>
+    <includes id="can__bus_8hpp" name="can_bus.hpp" local="no" imported="no">can_driver/can_bus.hpp</includes>
+  </compound>
+  <compound kind="file">
+    <name>can_receiver.cpp</name>
+    <path>/mathworks/home/dggoel/catkin_ws/src/swahana/mid_level_controller/src/can_driver/</path>
+    <filename>can__receiver_8cpp</filename>
+    <includes id="can__receiver_8hpp" name="can_receiver.hpp" local="no" imported="no">can_driver/can_receiver.hpp</includes>
+    <member kind="function">
+      <type>void</type>
+      <name>mysignalHandler</name>
+      <anchorfile>can__receiver_8cpp.html</anchorfile>
+      <anchor>a6800092c2405cae650216b5a87c48f86</anchor>
+      <arglist>(int signum)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>main</name>
+      <anchorfile>can__receiver_8cpp.html</anchorfile>
+      <anchor>a3c04138a5bfe5d72780bb7e82a18e627</anchor>
+      <arglist>(int argc, char **argv)</arglist>
+    </member>
+    <member kind="variable">
+      <type>can_receiver</type>
+      <name>receiver0</name>
+      <anchorfile>can__receiver_8cpp.html</anchorfile>
+      <anchor>ab89149bf5c8d6d5d0032f7ffa1f4afb4</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>can_receiver_vehicle.cpp</name>
+    <path>/mathworks/home/dggoel/catkin_ws/src/swahana/mid_level_controller/src/can_driver/</path>
+    <filename>can__receiver__vehicle_8cpp</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>mysignalHandler</name>
+      <anchorfile>can__receiver__vehicle_8cpp.html</anchorfile>
+      <anchor>a6800092c2405cae650216b5a87c48f86</anchor>
+      <arglist>(int signum)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>main</name>
+      <anchorfile>can__receiver__vehicle_8cpp.html</anchorfile>
+      <anchor>a3c04138a5bfe5d72780bb7e82a18e627</anchor>
+      <arglist>(int argc, char **argv)</arglist>
+    </member>
+    <member kind="variable">
+      <type>can_receiver_vehicle</type>
+      <name>receiver0</name>
+      <anchorfile>can__receiver__vehicle_8cpp.html</anchorfile>
+      <anchor>af1f220d505d0111c38290e96b7662699</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>can_settings_reader.cpp</name>
+    <path>/mathworks/home/dggoel/catkin_ws/src/swahana/mid_level_controller/src/can_driver/</path>
+    <filename>can__settings__reader_8cpp</filename>
+    <includes id="can__settings__reader_8hpp" name="can_settings_reader.hpp" local="no" imported="no">can_driver/can_settings_reader.hpp</includes>
+  </compound>
+  <compound kind="file">
+    <name>can_transmitter.cpp</name>
+    <path>/mathworks/home/dggoel/catkin_ws/src/swahana/mid_level_controller/src/can_driver/</path>
+    <filename>can__transmitter_8cpp</filename>
+    <includes id="can__transmitter_8hpp" name="can_transmitter.hpp" local="no" imported="no">can_driver/can_transmitter.hpp</includes>
+    <member kind="function">
+      <type>void</type>
+      <name>mysignalHandler</name>
+      <anchorfile>can__transmitter_8cpp.html</anchorfile>
+      <anchor>a6800092c2405cae650216b5a87c48f86</anchor>
+      <arglist>(int signum)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>main</name>
+      <anchorfile>can__transmitter_8cpp.html</anchorfile>
+      <anchor>a3c04138a5bfe5d72780bb7e82a18e627</anchor>
+      <arglist>(int argc, char **argv)</arglist>
+    </member>
+    <member kind="variable">
+      <type>can_transmitter</type>
+      <name>transmitter0</name>
+      <anchorfile>can__transmitter_8cpp.html</anchorfile>
+      <anchor>ae47ac10f33fb81045747533ee0d935cd</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>can_yaml_parser.cpp</name>
+    <path>/mathworks/home/dggoel/catkin_ws/src/swahana/mid_level_controller/src/can_driver/</path>
+    <filename>can__yaml__parser_8cpp</filename>
+    <includes id="can__yaml__parser_8hpp" name="can_yaml_parser.hpp" local="no" imported="no">can_driver/can_yaml_parser.hpp</includes>
+  </compound>
+  <compound kind="file">
+    <name>logger.cpp</name>
+    <path>/mathworks/home/dggoel/catkin_ws/src/swahana/mid_level_controller/src/can_driver/</path>
+    <filename>logger_8cpp</filename>
+    <includes id="logger_8hpp" name="logger.hpp" local="no" imported="no">can_driver/logger.hpp</includes>
+  </compound>
+  <compound kind="file">
+    <name>controller_settings_reader.cpp</name>
+    <path>/mathworks/home/dggoel/catkin_ws/src/swahana/mid_level_controller/src/controller/</path>
+    <filename>controller__settings__reader_8cpp</filename>
+    <includes id="controller__settings__reader_8hpp" name="controller_settings_reader.hpp" local="no" imported="no">controller/controller_settings_reader.hpp</includes>
+  </compound>
+  <compound kind="file">
+    <name>keyboard_interface.cpp</name>
+    <path>/mathworks/home/dggoel/catkin_ws/src/swahana/mid_level_controller/src/interfaces/</path>
+    <filename>keyboard__interface_8cpp</filename>
+    <includes id="keyboard__interface_8hpp" name="keyboard_interface.hpp" local="no" imported="no">interfaces/keyboard_interface.hpp</includes>
+    <member kind="function">
+      <type>void</type>
+      <name>quit</name>
+      <anchorfile>keyboard__interface_8cpp.html</anchorfile>
+      <anchor>af9150b82e29a37ab848ee2f66e993793</anchor>
+      <arglist>(int sig)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>main</name>
+      <anchorfile>keyboard__interface_8cpp.html</anchorfile>
+      <anchor>a3c04138a5bfe5d72780bb7e82a18e627</anchor>
+      <arglist>(int argc, char **argv)</arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>kfd</name>
+      <anchorfile>keyboard__interface_8cpp.html</anchorfile>
+      <anchor>a886857c2b2af9d1ac9a0ad403685e160</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>struct termios cooked</type>
+      <name>raw</name>
+      <anchorfile>keyboard__interface_8cpp.html</anchorfile>
+      <anchor>a22578afdd6632157bdfb67a2b2033378</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>can_bus</name>
+    <filename>classcan__bus.html</filename>
+    <member kind="function">
+      <type>int</type>
+      <name>open_port</name>
+      <anchorfile>classcan__bus.html</anchorfile>
+      <anchor>a3f7b5cafe2b25dda57998cfc6532f22b</anchor>
+      <arglist>(const char *port, const char *logfilepath, bool log_enabler)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>send_port</name>
+      <anchorfile>classcan__bus.html</anchorfile>
+      <anchor>a671d90e14175e0264325f3f7a46d1942</anchor>
+      <arglist>(struct can_frame *frame)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>read_port</name>
+      <anchorfile>classcan__bus.html</anchorfile>
+      <anchor>a84cfd3fa9a969e831407cea9bb39c02a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>set_filter</name>
+      <anchorfile>classcan__bus.html</anchorfile>
+      <anchor>a4ef8ad31ea981d351d3587692e603895</anchor>
+      <arglist>(unsigned int can_id, unsigned int can_filter)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>close_port</name>
+      <anchorfile>classcan__bus.html</anchorfile>
+      <anchor>a1685dfba0e714140429fb7f7af089c11</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>byte_to_array</name>
+      <anchorfile>classcan__bus.html</anchorfile>
+      <anchor>a7ee0e8b64c2977067785492b3ebc6722</anchor>
+      <arglist>(uint8_t(&amp;out_array)[8], uint64_t byte_no_input)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>byte_to_array</name>
+      <anchorfile>classcan__bus.html</anchorfile>
+      <anchor>aeeae9e962ab6ac5af4e2650e2f8918ab</anchor>
+      <arglist>(uint8_t(&amp;out_array)[16], uint64_t byte_no_input[2])</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>array_to_byte</name>
+      <anchorfile>classcan__bus.html</anchorfile>
+      <anchor>a7ba22ba61dcf95c75d17f2aae009fbca</anchor>
+      <arglist>(uint64_t &amp;byte_no_output, uint8_t input_array[8])</arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>soc</name>
+      <anchorfile>classcan__bus.html</anchorfile>
+      <anchor>a3df3b5003722fa6edffa96716a40ddcb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>logger</type>
+      <name>log_file</name>
+      <anchorfile>classcan__bus.html</anchorfile>
+      <anchor>a41284e6442df417bd40258e4b9304dca</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>log_enabled</name>
+      <anchorfile>classcan__bus.html</anchorfile>
+      <anchor>aab60d036cf5f73028d7fb19b8d52d9ef</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; canfd_frame &gt;</type>
+      <name>incoming_message</name>
+      <anchorfile>classcan__bus.html</anchorfile>
+      <anchor>adaf1c410ed8c7046aa3c1cb1c443b79b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>struct canfd_frame</type>
+      <name>frame_temp</name>
+      <anchorfile>classcan__bus.html</anchorfile>
+      <anchor>ab33abde7e361a221e03d08a3e1d78647</anchor>
+      <arglist>[20]</arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>frame_count</name>
+      <anchorfile>classcan__bus.html</anchorfile>
+      <anchor>a5af30d22dd9b3f0b6d50ae547605fb59</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>max_no_frames</name>
+      <anchorfile>classcan__bus.html</anchorfile>
+      <anchor>ac7747fde0e63953771dc354b2a503122</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>can_message</name>
+    <filename>structcan__message.html</filename>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>message_name</name>
+      <anchorfile>structcan__message.html</anchorfile>
+      <anchor>aa37e70a08e271a1c8bb332610c4b6b42</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>unsigned int</type>
+      <name>message_id</name>
+      <anchorfile>structcan__message.html</anchorfile>
+      <anchor>a5109d61ed04c20d6e048517d03557cb6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>unsigned int</type>
+      <name>message_count</name>
+      <anchorfile>structcan__message.html</anchorfile>
+      <anchor>a0de5b68517f4fd77941ed6f7b81ee718</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>unsigned int</type>
+      <name>total_length</name>
+      <anchorfile>structcan__message.html</anchorfile>
+      <anchor>a459eda4f61c756bfea241e6f1e027ccb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; unsigned int &gt;</type>
+      <name>start_bit</name>
+      <anchorfile>structcan__message.html</anchorfile>
+      <anchor>a9175fcc01382c3a29ffdcc8f79d971bb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; unsigned int &gt;</type>
+      <name>validity_bit</name>
+      <anchorfile>structcan__message.html</anchorfile>
+      <anchor>aa60d84e6348ba3d1fbd30f73760b39cf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; unsigned int &gt;</type>
+      <name>message_length</name>
+      <anchorfile>structcan__message.html</anchorfile>
+      <anchor>afab0b34cd934176d452eda637c821a3a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; std::string &gt;</type>
+      <name>names</name>
+      <anchorfile>structcan__message.html</anchorfile>
+      <anchor>a06b79fd38a157357817d23107e8d15f6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; dictionary_map &gt;</type>
+      <name>dictionary</name>
+      <anchorfile>structcan__message.html</anchorfile>
+      <anchor>a2996ea33c6310d7eb2cf1f2b3e7fa803</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>can_receiver</name>
+    <filename>classcan__receiver.html</filename>
+    <member kind="function">
+      <type>std::string</type>
+      <name>get_key_dictionary</name>
+      <anchorfile>classcan__receiver.html</anchorfile>
+      <anchor>af35b7c001e420ba01e6d42bcbaa635f4</anchor>
+      <arglist>(unsigned int input_value, dictionary_map input_map)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>insert_output_topic_data</name>
+      <anchorfile>classcan__receiver.html</anchorfile>
+      <anchor>aa89212afccdf680ec329d8ca420f89ed</anchor>
+      <arglist>(std::string result, std::string topic_value)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>print_output</name>
+      <anchorfile>classcan__receiver.html</anchorfile>
+      <anchor>aca15addcba71391932314ba3151be5ec</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>can_frametostr</name>
+      <anchorfile>classcan__receiver.html</anchorfile>
+      <anchor>aea219585d439434f21743ab581b7918a</anchor>
+      <arglist>(canfd_frame message_temp)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>get_index</name>
+      <anchorfile>classcan__receiver.html</anchorfile>
+      <anchor>a8fbedd720a588cadca534006de0c3d7e</anchor>
+      <arglist>(canfd_frame can_message)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>can_listener</name>
+      <anchorfile>classcan__receiver.html</anchorfile>
+      <anchor>a9fe270ebeba0a71c78b18b9e97b8b8c2</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>msg_parse</name>
+      <anchorfile>classcan__receiver.html</anchorfile>
+      <anchor>a0a2d682292c866292d1a5cbd401d1e49</anchor>
+      <arglist>(canfd_frame can_message[], int incoming_data_len)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>print_processed_structure_stored</name>
+      <anchorfile>classcan__receiver.html</anchorfile>
+      <anchor>ab24ecea8f02060b6b9492afa331f181f</anchor>
+      <arglist>(input_particulars_map input_map)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>print_can_message_vector</name>
+      <anchorfile>classcan__receiver.html</anchorfile>
+      <anchor>a261f7d3ff0d72639f07c2bb766ad4024</anchor>
+      <arglist>(std::vector&lt; canfd_frame &gt; can_message_array)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>print_structure_stored</name>
+      <anchorfile>classcan__receiver.html</anchorfile>
+      <anchor>a36abf4997472498022ed424fe29c09c9</anchor>
+      <arglist>(can_topics_data_map input_map)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>receiver_setup</name>
+      <anchorfile>classcan__receiver.html</anchorfile>
+      <anchor>a7624e055e862fa64efdc6811b0a76e3c</anchor>
+      <arglist>(const char *input_yaml_file, const char *logfilepath, const char *can_settings_file_path)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>receiver_exit</name>
+      <anchorfile>classcan__receiver.html</anchorfile>
+      <anchor>a90997229de67ec9fdcbdf52919e40dd4</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>signalHandler</name>
+      <anchorfile>classcan__receiver.html</anchorfile>
+      <anchor>a1e426365aa7b88b7eb9ae800858bdb45</anchor>
+      <arglist>(int signum)</arglist>
+    </member>
+    <member kind="variable">
+      <type>can_yaml_parser</type>
+      <name>status</name>
+      <anchorfile>classcan__receiver.html</anchorfile>
+      <anchor>aa1f052a3ceb09589a1f1b9fe8176397b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>can_bus</type>
+      <name>bus_receiver</name>
+      <anchorfile>classcan__receiver.html</anchorfile>
+      <anchor>a0b1124caeca29a0b6bf5cdd53f32fe25</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>output_msg</type>
+      <name>output0</name>
+      <anchorfile>classcan__receiver.html</anchorfile>
+      <anchor>aa49025f4e7bac1f225ce822449f0678c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; output_msg &gt;</type>
+      <name>recieved_data</name>
+      <anchorfile>classcan__receiver.html</anchorfile>
+      <anchor>a5e844f2ee9c0bf3ead0042da15168e85</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>mid_level_controller::Can_Status_Message</type>
+      <name>output1</name>
+      <anchorfile>classcan__receiver.html</anchorfile>
+      <anchor>a17f1748e0c1bc21a73fb0ea067883cfc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>unsigned int</type>
+      <name>unknown_count</name>
+      <anchorfile>classcan__receiver.html</anchorfile>
+      <anchor>a72b2e6b7910106968105e7c30e7a1ffb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>can_topics_data_map</type>
+      <name>status_map</name>
+      <anchorfile>classcan__receiver.html</anchorfile>
+      <anchor>ae89129ad63705d00c703fa135f15f02e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>log_enable</name>
+      <anchorfile>classcan__receiver.html</anchorfile>
+      <anchor>a29b4c297a714d628c41434cb891f3f44</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>char *</type>
+      <name>yaml_file_path</name>
+      <anchorfile>classcan__receiver.html</anchorfile>
+      <anchor>a0bdc14883759919cf5373bbb16dca228</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>struct dictionary_map</type>
+      <name>empty_dictionary_map</name>
+      <anchorfile>classcan__receiver.html</anchorfile>
+      <anchor>a2e22769909cef527d44bc9221df7d04a</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>can_receiver_vehicle</name>
+    <filename>classcan__receiver__vehicle.html</filename>
+    <member kind="function">
+      <type>std::string</type>
+      <name>get_key_dictionary</name>
+      <anchorfile>classcan__receiver__vehicle.html</anchorfile>
+      <anchor>a5161ceed914137c785400223c0575460</anchor>
+      <arglist>(unsigned int input_value, dictionary_map input_map)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>insert_output_topic_data</name>
+      <anchorfile>classcan__receiver__vehicle.html</anchorfile>
+      <anchor>ad75fa741d217fb461904150e2596c843</anchor>
+      <arglist>(std::string result, std::string topic_value)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>print_output</name>
+      <anchorfile>classcan__receiver__vehicle.html</anchorfile>
+      <anchor>add0f138cf7dbe47cb1ccc2c0aa5ed057</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>can_frametostr</name>
+      <anchorfile>classcan__receiver__vehicle.html</anchorfile>
+      <anchor>a80954dc2973df6b017e8f476abe03a0c</anchor>
+      <arglist>(canfd_frame message_temp)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>get_index</name>
+      <anchorfile>classcan__receiver__vehicle.html</anchorfile>
+      <anchor>a5846e0257c55338bf663489a66639701</anchor>
+      <arglist>(canfd_frame can_message)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>can_listener</name>
+      <anchorfile>classcan__receiver__vehicle.html</anchorfile>
+      <anchor>a0f12614430076d383cbaf8e194902f38</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>msg_parse</name>
+      <anchorfile>classcan__receiver__vehicle.html</anchorfile>
+      <anchor>ae0aa49c4338a7fc7a54e6930d4594b7a</anchor>
+      <arglist>(canfd_frame can_message[], int incoming_data_len)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>print_processed_structure_stored</name>
+      <anchorfile>classcan__receiver__vehicle.html</anchorfile>
+      <anchor>abe5a1871b75cf845c590e551c8f396d2</anchor>
+      <arglist>(input_particulars_map input_map)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>print_can_message_vector</name>
+      <anchorfile>classcan__receiver__vehicle.html</anchorfile>
+      <anchor>a3c2f68f3e9ae31f36c151eea48785bdd</anchor>
+      <arglist>(std::vector&lt; canfd_frame &gt; can_message_array)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>print_structure_stored</name>
+      <anchorfile>classcan__receiver__vehicle.html</anchorfile>
+      <anchor>a68cac5718fd0de23ea7adece6d2cd5e1</anchor>
+      <arglist>(can_topics_data_map input_map)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>receiver_setup</name>
+      <anchorfile>classcan__receiver__vehicle.html</anchorfile>
+      <anchor>a7c413a63365333d525e1d861c6bcc7b4</anchor>
+      <arglist>(const char *input_yaml_file, const char *logfilepath, const char *can_settings_file_path)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>receiver_exit</name>
+      <anchorfile>classcan__receiver__vehicle.html</anchorfile>
+      <anchor>ae1135b9931c978c191f9d3fa55800988</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>signalHandler</name>
+      <anchorfile>classcan__receiver__vehicle.html</anchorfile>
+      <anchor>af8f0175a5ccabea28c0a8665b47e423c</anchor>
+      <arglist>(int signum)</arglist>
+    </member>
+    <member kind="variable">
+      <type>can_yaml_parser</type>
+      <name>status</name>
+      <anchorfile>classcan__receiver__vehicle.html</anchorfile>
+      <anchor>af8d395f8dbf6a3302d0f59e6fbc8e5c1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>can_bus</type>
+      <name>bus_receiver</name>
+      <anchorfile>classcan__receiver__vehicle.html</anchorfile>
+      <anchor>a917cde9d3b5d1c823e9237556bf4006e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>output_msg</type>
+      <name>output0</name>
+      <anchorfile>classcan__receiver__vehicle.html</anchorfile>
+      <anchor>a56b0252af7babf62382a673b2955f2e3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; output_msg &gt;</type>
+      <name>recieved_data</name>
+      <anchorfile>classcan__receiver__vehicle.html</anchorfile>
+      <anchor>a87a9fa5688c2d14a4e9786ef02770235</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>mid_level_controller::Can_Status_Message</type>
+      <name>output1</name>
+      <anchorfile>classcan__receiver__vehicle.html</anchorfile>
+      <anchor>a00ccc958dacc242fc60e136269716f61</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>unsigned int</type>
+      <name>unknown_count</name>
+      <anchorfile>classcan__receiver__vehicle.html</anchorfile>
+      <anchor>a1f35ca362e03697f227265a2b426a39e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>can_topics_data_map</type>
+      <name>status_map</name>
+      <anchorfile>classcan__receiver__vehicle.html</anchorfile>
+      <anchor>aa35e2e0fb81f02302a6a6d14fcb1e8b2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>log_enable</name>
+      <anchorfile>classcan__receiver__vehicle.html</anchorfile>
+      <anchor>a210bc7bee42ac220a2670cb2589d66f1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>char *</type>
+      <name>yaml_file_path</name>
+      <anchorfile>classcan__receiver__vehicle.html</anchorfile>
+      <anchor>a84510cb5a871f1c13d8164032e5deb8b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>struct dictionary_map</type>
+      <name>empty_dictionary_map</name>
+      <anchorfile>classcan__receiver__vehicle.html</anchorfile>
+      <anchor>a13d7f7b91c719db3ea206e159a4d1503</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>can_settings</name>
+    <filename>structcan__settings.html</filename>
+    <member kind="variable">
+      <type>unsigned int</type>
+      <name>bCANCommBaud</name>
+      <anchorfile>structcan__settings.html</anchorfile>
+      <anchor>a307b9428d0846b0cf969e796e86d606e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>can_channel</name>
+      <anchorfile>structcan__settings.html</anchorfile>
+      <anchor>a5fa221ca2972a5763eac5daf77409b2e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>can_channel_2</name>
+      <anchorfile>structcan__settings.html</anchorfile>
+      <anchor>aa7f18c0b07524659e4c1b86efd832235</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>rtr_enable</name>
+      <anchorfile>structcan__settings.html</anchorfile>
+      <anchor>a4e41d3d8c3a11397d2d05d9cee6f1953</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>extended_enable</name>
+      <anchorfile>structcan__settings.html</anchorfile>
+      <anchor>a1e518db8dd9fb7acf506df8be3c834a2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>unsigned int</type>
+      <name>can_mask</name>
+      <anchorfile>structcan__settings.html</anchorfile>
+      <anchor>a4b33497c839283dd188265335ec1b32a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>raw_msg_enable</name>
+      <anchorfile>structcan__settings.html</anchorfile>
+      <anchor>ac69a0b055974cf096fcb6801f6858aa4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>log_enable</name>
+      <anchorfile>structcan__settings.html</anchorfile>
+      <anchor>ae6fe77f542c6283c2880d00c55b3567f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>debug_msg_enable</name>
+      <anchorfile>structcan__settings.html</anchorfile>
+      <anchor>a3b43a04341c5fd3dc1ad2e54fa847dfb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>accl_limit</name>
+      <anchorfile>structcan__settings.html</anchorfile>
+      <anchor>aa99336e36987e109826e0772aa42356d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>steer_limit</name>
+      <anchorfile>structcan__settings.html</anchorfile>
+      <anchor>af2d3a449aede6e83d9634884bc1f4888</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>sudo_passwd</name>
+      <anchorfile>structcan__settings.html</anchorfile>
+      <anchor>a087798ebea6204a4935db3c7f5bc71fe</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>can_settings_reader</name>
+    <filename>classcan__settings__reader.html</filename>
+    <member kind="function">
+      <type>int</type>
+      <name>close_file</name>
+      <anchorfile>classcan__settings__reader.html</anchorfile>
+      <anchor>abea35427aece3cd2b1f06f4a8fc9abe1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>param_print_all</name>
+      <anchorfile>classcan__settings__reader.html</anchorfile>
+      <anchor>a212e94d10cf0c7bc16407a1a9c7eb15b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>add_param</name>
+      <anchorfile>classcan__settings__reader.html</anchorfile>
+      <anchor>ac4d7200a153b34ed156fe516831dbb9d</anchor>
+      <arglist>(std::string &amp;parameter_name, std::string &amp;parameter_value)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>read_file</name>
+      <anchorfile>classcan__settings__reader.html</anchorfile>
+      <anchor>a4e16da5a0b98a8215921206759cd442f</anchor>
+      <arglist>(const char *filepath)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>ltrim</name>
+      <anchorfile>classcan__settings__reader.html</anchorfile>
+      <anchor>acb4572465654440a249cc673edf174ea</anchor>
+      <arglist>(std::string &amp;sample, char char_to_erase)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>rtrim</name>
+      <anchorfile>classcan__settings__reader.html</anchorfile>
+      <anchor>a38e509589e2ff6462083913c3e878766</anchor>
+      <arglist>(std::string &amp;sample, char char_to_erase)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>trim</name>
+      <anchorfile>classcan__settings__reader.html</anchorfile>
+      <anchor>af965974cb6666600e42ef2666a7c3f52</anchor>
+      <arglist>(std::string &amp;sample, char char_to_erase)</arglist>
+    </member>
+    <member kind="variable">
+      <type>can_settings</type>
+      <name>can0</name>
+      <anchorfile>classcan__settings__reader.html</anchorfile>
+      <anchor>aa94bcc7272aa34b4e2f698601768d44c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>can_settings</type>
+      <name>can1</name>
+      <anchorfile>classcan__settings__reader.html</anchorfile>
+      <anchor>a3b12b5db93004a8f88ae9eca298ab1ec</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::ifstream</type>
+      <name>myfile</name>
+      <anchorfile>classcan__settings__reader.html</anchorfile>
+      <anchor>a50cdd41e6ca69514ad81d1aea3c71008</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>can_topics_data_map</name>
+    <filename>structcan__topics__data__map.html</filename>
+    <member kind="variable">
+      <type>std::vector&lt; canfd_frame &gt;</type>
+      <name>can_message_array_map</name>
+      <anchorfile>structcan__topics__data__map.html</anchorfile>
+      <anchor>a58786496e82903f503559d4c5feccbef</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; dictionary_map &gt;</type>
+      <name>can_dictionary_map</name>
+      <anchorfile>structcan__topics__data__map.html</anchorfile>
+      <anchor>aa537240deff8bb6e08dc80ffed34e5e4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; std::string &gt;</type>
+      <name>can_topics_map</name>
+      <anchorfile>structcan__topics__data__map.html</anchorfile>
+      <anchor>a335657e37033938d79a59f5e292c45c1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; unsigned int &gt;</type>
+      <name>can_total_length_map</name>
+      <anchorfile>structcan__topics__data__map.html</anchorfile>
+      <anchor>a397bb7a561c07e7be1197cc8a0fded2a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; unsigned int &gt;</type>
+      <name>can_start_bit_map</name>
+      <anchorfile>structcan__topics__data__map.html</anchorfile>
+      <anchor>a8f7210f2dbc6c8dc7173ed8ad211a358</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; unsigned int &gt;</type>
+      <name>can_message_length_map</name>
+      <anchorfile>structcan__topics__data__map.html</anchorfile>
+      <anchor>a486211e4f1db81de24f356bbcc9d10f7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; unsigned int &gt;</type>
+      <name>can_validity_bits_map</name>
+      <anchorfile>structcan__topics__data__map.html</anchorfile>
+      <anchor>af4d0b1c876897c75b10b998073719739</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; unsigned int &gt;</type>
+      <name>can_message_count_map</name>
+      <anchorfile>structcan__topics__data__map.html</anchorfile>
+      <anchor>a83c6bbed92ff96541343bf0083bd803b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; unsigned int &gt;</type>
+      <name>can_arbitration_id_map</name>
+      <anchorfile>structcan__topics__data__map.html</anchorfile>
+      <anchor>ab8d2f839f6a23a4f79d355f9deacb6fb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; can_frame &gt;</type>
+      <name>can_message_array_map</name>
+      <anchorfile>structcan__topics__data__map.html</anchorfile>
+      <anchor>a34d84450bc9599a32936e75238ff274a</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>can_transmitter</name>
+    <filename>classcan__transmitter.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>usage</name>
+      <anchorfile>classcan__transmitter.html</anchorfile>
+      <anchor>a612c3572238de0f9ea6852178ee99813</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>version</name>
+      <anchorfile>classcan__transmitter.html</anchorfile>
+      <anchor>a3498a5206c031cbd67d9dd24387d9299</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>print_can_message_vector</name>
+      <anchorfile>classcan__transmitter.html</anchorfile>
+      <anchor>a94e74ec80f5bb37cccc342b65d5e1385</anchor>
+      <arglist>(std::vector&lt; can_frame &gt; can_message_array)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>can_callback</name>
+      <anchorfile>classcan__transmitter.html</anchorfile>
+      <anchor>ad2335bd666af5212053ce211768fe44c</anchor>
+      <arglist>(const mid_level_controller::Callback_Msg::ConstPtr &amp;msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>print_structure_stored</name>
+      <anchorfile>classcan__transmitter.html</anchorfile>
+      <anchor>ac6793560565616af0234784faf60c324</anchor>
+      <arglist>(can_topics_data_map input_map)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>transmitter_setup</name>
+      <anchorfile>classcan__transmitter.html</anchorfile>
+      <anchor>accced4234154a274e4d2788e2e9ebf19</anchor>
+      <arglist>(const char *input_yaml_file, const char *logfilepath, const char *can_settings_file_path)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>transmitter_exit</name>
+      <anchorfile>classcan__transmitter.html</anchorfile>
+      <anchor>aa6694467359fe9d4e6272444814ad106</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>signalHandler</name>
+      <anchorfile>classcan__transmitter.html</anchorfile>
+      <anchor>a63ae20373cbbeb8e21befc53673fc062</anchor>
+      <arglist>(int signum)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static uint64_t</type>
+      <name>returns_reset_msg</name>
+      <anchorfile>classcan__transmitter.html</anchorfile>
+      <anchor>a235215ee6de951b709a0b19b3d74cbab</anchor>
+      <arglist>(uint64_t start, uint64_t length)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static uint64_t</type>
+      <name>returns_value_msg</name>
+      <anchorfile>classcan__transmitter.html</anchorfile>
+      <anchor>a7d93e1169a9ce8f93294283a6fa29fb5</anchor>
+      <arglist>(uint64_t start, uint64_t value)</arglist>
+    </member>
+    <member kind="variable">
+      <type>can_topics_data_map</type>
+      <name>control_map</name>
+      <anchorfile>classcan__transmitter.html</anchorfile>
+      <anchor>a543c71c12b21ea8e996a013ce4870ddf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>can_bus</type>
+      <name>transmitter</name>
+      <anchorfile>classcan__transmitter.html</anchorfile>
+      <anchor>afc5c7bef52573a84bb443b7e7319a122</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>can_yaml_parser</type>
+      <name>control</name>
+      <anchorfile>classcan__transmitter.html</anchorfile>
+      <anchor>a4a8ffd0c7484e1c21d4f707039a78642</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>log_enable</name>
+      <anchorfile>classcan__transmitter.html</anchorfile>
+      <anchor>ad21f9119de97a4114a3b3b6b8a9f1d42</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>char *</type>
+      <name>yaml_file_path</name>
+      <anchorfile>classcan__transmitter.html</anchorfile>
+      <anchor>a25a4e7cdd02b22958ced4c61c1d2db8f</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>can_yaml_parser</name>
+    <filename>classcan__yaml__parser.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>print_u_int_vector</name>
+      <anchorfile>classcan__yaml__parser.html</anchorfile>
+      <anchor>a7b492d2898cbc7c4edf92757fd73480c</anchor>
+      <arglist>(std::vector&lt; unsigned int &gt; messages_array_temp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>print_names_vector</name>
+      <anchorfile>classcan__yaml__parser.html</anchorfile>
+      <anchor>aab36f9903c4ba714a8950cbedc898e83</anchor>
+      <arglist>(std::vector&lt; std::string &gt; messages_array_temp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>print_dictionary_map</name>
+      <anchorfile>classcan__yaml__parser.html</anchorfile>
+      <anchor>a8cfb28f32b07c64f80becf06056144a6</anchor>
+      <arglist>(dictionary_map messages_array_temp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>print_dictionary_vector</name>
+      <anchorfile>classcan__yaml__parser.html</anchorfile>
+      <anchor>a474281a0ecef370c381c38102b96327d</anchor>
+      <arglist>(std::vector&lt; dictionary_map &gt; messages_array_temp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>get_array</name>
+      <anchorfile>classcan__yaml__parser.html</anchorfile>
+      <anchor>a24d5331bf2c361403511ca8eaaba65dd</anchor>
+      <arglist>(std::string sample, std::vector&lt; unsigned int &gt; &amp;messages_array)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>remove_special_chars</name>
+      <anchorfile>classcan__yaml__parser.html</anchorfile>
+      <anchor>a8731a4734fa2bcc5813f82d26e440345</anchor>
+      <arglist>(std::string &amp;sample)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>get_names_array</name>
+      <anchorfile>classcan__yaml__parser.html</anchorfile>
+      <anchor>a3f6f98601446c8863298cfeef2c43fcc</anchor>
+      <arglist>(std::string &amp;sample, std::vector&lt; std::string &gt; &amp;messages_array_data)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>fetch_key_value_pair</name>
+      <anchorfile>classcan__yaml__parser.html</anchorfile>
+      <anchor>a282ad19100f9ba9965d2445f890b0dea</anchor>
+      <arglist>(std::string &amp;sample, std::string &amp;key, unsigned int &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>get_dictionary_array</name>
+      <anchorfile>classcan__yaml__parser.html</anchorfile>
+      <anchor>a4d5224930ca60601d8ae076a864b6e29</anchor>
+      <arglist>(std::string &amp;sample, std::vector&lt; dictionary_map &gt; &amp;messages_array)</arglist>
+    </member>
+    <member kind="function">
+      <type>dictionary_map</type>
+      <name>get_dictionary_map</name>
+      <anchorfile>classcan__yaml__parser.html</anchorfile>
+      <anchor>ab09402d0276b3df3aee58e5540caf9d4</anchor>
+      <arglist>(std::string &amp;sample)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>param_print_all</name>
+      <anchorfile>classcan__yaml__parser.html</anchorfile>
+      <anchor>af08bae386fb17b606967029e5f1b6619</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>add_param</name>
+      <anchorfile>classcan__yaml__parser.html</anchorfile>
+      <anchor>a0209f8ff37c90001d7ffe6df86d8a427</anchor>
+      <arglist>(std::string &amp;parameter_name, std::string &amp;parameter_value)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>read_file</name>
+      <anchorfile>classcan__yaml__parser.html</anchorfile>
+      <anchor>afa16839f445aac5894a88309671fdcde</anchor>
+      <arglist>(const char *filepath)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>close_file</name>
+      <anchorfile>classcan__yaml__parser.html</anchorfile>
+      <anchor>a48c44013fd795085f29bc58a40a8bd63</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>ltrim</name>
+      <anchorfile>classcan__yaml__parser.html</anchorfile>
+      <anchor>a720fe019e6ff4ef6ae818a552cd68cb3</anchor>
+      <arglist>(std::string &amp;sample, char char_to_erase)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>rtrim</name>
+      <anchorfile>classcan__yaml__parser.html</anchorfile>
+      <anchor>a826b68e58f0b5aa7df928be99ea485cb</anchor>
+      <arglist>(std::string &amp;sample, char char_to_erase)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>trim</name>
+      <anchorfile>classcan__yaml__parser.html</anchorfile>
+      <anchor>a02b0d69d80d2d34a65442122255c8a9c</anchor>
+      <arglist>(std::string &amp;sample, char char_to_erase)</arglist>
+    </member>
+    <member kind="variable">
+      <type>std::ifstream</type>
+      <name>myfile</name>
+      <anchorfile>classcan__yaml__parser.html</anchorfile>
+      <anchor>a66f77560454cdc100d494676077f9757</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>vector_count</name>
+      <anchorfile>classcan__yaml__parser.html</anchorfile>
+      <anchor>a526ed164dd74c0cd310396f2b09c8c8b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; can_message &gt;</type>
+      <name>can_io_message</name>
+      <anchorfile>classcan__yaml__parser.html</anchorfile>
+      <anchor>ae40d4bdea47b1eb9edfd46044ced791a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; canfd_frame &gt;</type>
+      <name>can_message_array_map</name>
+      <anchorfile>classcan__yaml__parser.html</anchorfile>
+      <anchor>a0f163b34b4cca083251c6b873788e270</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>controller_settings</name>
+    <filename>structcontroller__settings.html</filename>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>input_mode</name>
+      <anchorfile>structcontroller__settings.html</anchorfile>
+      <anchor>a5ddcce94ec822087d4beeb4e90e286f9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>controller_feedback_source</name>
+      <anchorfile>structcontroller__settings.html</anchorfile>
+      <anchor>a815efb1a1150792e2a471d90ff5a3f86</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>sudo_passwd</name>
+      <anchorfile>structcontroller__settings.html</anchorfile>
+      <anchor>a36df56d27695b8dfb24712aeb5a6923c</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>controller_settings_reader</name>
+    <filename>classcontroller__settings__reader.html</filename>
+    <member kind="function">
+      <type>int</type>
+      <name>close_file</name>
+      <anchorfile>classcontroller__settings__reader.html</anchorfile>
+      <anchor>aa39089e9723800c7999a9de3e017ad64</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>param_print_all</name>
+      <anchorfile>classcontroller__settings__reader.html</anchorfile>
+      <anchor>abf5c83f69e8d8d473f2ad77123b9392a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>add_param</name>
+      <anchorfile>classcontroller__settings__reader.html</anchorfile>
+      <anchor>a9db374a95b0775d4fcde014ea2ad17ca</anchor>
+      <arglist>(std::string &amp;parameter_name, std::string &amp;parameter_value)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>read_file</name>
+      <anchorfile>classcontroller__settings__reader.html</anchorfile>
+      <anchor>a603b49a8d8da607ade6539bd353ac664</anchor>
+      <arglist>(const char *filepath)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>ltrim</name>
+      <anchorfile>classcontroller__settings__reader.html</anchorfile>
+      <anchor>a1eb7aa3a71a16845f319573634db8177</anchor>
+      <arglist>(std::string &amp;sample, char char_to_erase)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>rtrim</name>
+      <anchorfile>classcontroller__settings__reader.html</anchorfile>
+      <anchor>a17a2c70b9475a64894a7455513a489f6</anchor>
+      <arglist>(std::string &amp;sample, char char_to_erase)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>trim</name>
+      <anchorfile>classcontroller__settings__reader.html</anchorfile>
+      <anchor>a87f1935a0e61bc972f31560d31f7b6f9</anchor>
+      <arglist>(std::string &amp;sample, char char_to_erase)</arglist>
+    </member>
+    <member kind="variable">
+      <type>controller_settings</type>
+      <name>settings0</name>
+      <anchorfile>classcontroller__settings__reader.html</anchorfile>
+      <anchor>a6fab94d1cb546ea01224a516824442f4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::ifstream</type>
+      <name>myfile</name>
+      <anchorfile>classcontroller__settings__reader.html</anchorfile>
+      <anchor>ac9ccc47446e295832fad96ef23eca8a4</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>dictionary_map</name>
+    <filename>structdictionary__map.html</filename>
+    <member kind="variable">
+      <type>std::vector&lt; std::string &gt;</type>
+      <name>key</name>
+      <anchorfile>structdictionary__map.html</anchorfile>
+      <anchor>a325b1ef08da7995fe8556c278f1234c4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; unsigned int &gt;</type>
+      <name>value</name>
+      <anchorfile>structdictionary__map.html</anchorfile>
+      <anchor>aa8f15391a14dce8aac55548afb6dd4c5</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>input_particulars_map</name>
+    <filename>structinput__particulars__map.html</filename>
+    <member kind="variable">
+      <type>std::vector&lt; canfd_frame &gt;</type>
+      <name>input_can_message_array_map</name>
+      <anchorfile>structinput__particulars__map.html</anchorfile>
+      <anchor>a661e2496858c143f045011f3db891df7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; can_topics_data_map &gt;</type>
+      <name>input_can_topics_data_map</name>
+      <anchorfile>structinput__particulars__map.html</anchorfile>
+      <anchor>a217a5004f0f74f3e0d977b3e493cdfd5</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>interface</name>
+    <filename>classinterface.html</filename>
+    <member kind="variable">
+      <type>mid_level_controller::Callback_Msg</type>
+      <name>teleop_car_control</name>
+      <anchorfile>classinterface.html</anchorfile>
+      <anchor>a5b1e85ad74833034fa9e07222e0898b3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>geometry_msgs::Twist</type>
+      <name>teleop_car_velocity</name>
+      <anchorfile>classinterface.html</anchorfile>
+      <anchor>af7661e4a9b5415715b09c1d602ffc924</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>ros::Publisher</type>
+      <name>control_pub</name>
+      <anchorfile>classinterface.html</anchorfile>
+      <anchor>a69f45d22d0e032f8ddbd874beac84d43</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>trajectory</name>
+      <anchorfile>classinterface.html</anchorfile>
+      <anchor>a7d8ba25cf29937d0742ceb63504c016d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>debug_enable</name>
+      <anchorfile>classinterface.html</anchorfile>
+      <anchor>a7de359db499d83f9b70744a1ade44c36</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>trajectory_following</name>
+      <anchorfile>classinterface.html</anchorfile>
+      <anchor>a82782f94ddcbdc784d456777a77a4170</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>joy_interface</name>
+    <filename>classjoy__interface.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>joy_interface</name>
+      <anchorfile>classjoy__interface.html</anchorfile>
+      <anchor>a7dec34afda67fb3e3333d9b09776bab8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>joycallback</name>
+      <anchorfile>classjoy__interface.html</anchorfile>
+      <anchor>a2a9256cd4248693524bbf579d2ea562e</anchor>
+      <arglist>(const sensor_msgs::Joy::ConstPtr &amp;msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>init</name>
+      <anchorfile>classjoy__interface.html</anchorfile>
+      <anchor>aa69c0f1f95302db170fc043677af171a</anchor>
+      <arglist>(const char *controller_settings_file_path)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>reset_state</name>
+      <anchorfile>classjoy__interface.html</anchorfile>
+      <anchor>a3dcaa65fc7b4c05256220bad9b96ec71</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>print_state</name>
+      <anchorfile>classjoy__interface.html</anchorfile>
+      <anchor>a20217d350bbdb4674d83a83b2ced3cf5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>print_help</name>
+      <anchorfile>classjoy__interface.html</anchorfile>
+      <anchor>a7b37faafb29d47f9fe73e24ad2de9387</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>print_debug</name>
+      <anchorfile>classjoy__interface.html</anchorfile>
+      <anchor>aae6e7ea6b2394a72bbc08fa8d1338113</anchor>
+      <arglist>(std::string print_msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>current_steering</name>
+      <anchorfile>classjoy__interface.html</anchorfile>
+      <anchor>ad4982401a6c20fe5429caadd46da317a</anchor>
+      <arglist>(int time_handle, double target, double starting_position, double time_limit)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>current_speed</name>
+      <anchorfile>classjoy__interface.html</anchorfile>
+      <anchor>a5d67053adb053b4c17b00c31ec4f7837</anchor>
+      <arglist>(int time_handle, double target, double starting_position, double time_limit)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>quit</name>
+      <anchorfile>classjoy__interface.html</anchorfile>
+      <anchor>a553e3b935d5d31c3382f394b309b935c</anchor>
+      <arglist>(int sig)</arglist>
+    </member>
+    <member kind="variable">
+      <type>mid_level_controller::Callback_Msg</type>
+      <name>teleop_car_control</name>
+      <anchorfile>classjoy__interface.html</anchorfile>
+      <anchor>a3a8043b413e9123c02e763fab87c4d96</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>geometry_msgs::Twist</type>
+      <name>teleop_car_velocity</name>
+      <anchorfile>classjoy__interface.html</anchorfile>
+      <anchor>a2040bca8bcb802ca6ff7f8550f4a60ee</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>ros::Publisher</type>
+      <name>control_pub</name>
+      <anchorfile>classjoy__interface.html</anchorfile>
+      <anchor>a4734e024dfcb59dba47f2df142e21356</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>trajectory</name>
+      <anchorfile>classjoy__interface.html</anchorfile>
+      <anchor>a0c4f2f05c109ef03f7f67991cfc8c35c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>debug_enable</name>
+      <anchorfile>classjoy__interface.html</anchorfile>
+      <anchor>a0870f1f67249375012fa3c6b7ab467da</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>trajectory_following</name>
+      <anchorfile>classjoy__interface.html</anchorfile>
+      <anchor>a72f8d31ecc3dc9d90a7880c8153402fb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>ros::Publisher</type>
+      <name>vel_pub</name>
+      <anchorfile>classjoy__interface.html</anchorfile>
+      <anchor>aae2b422ec0bf1c9f5fb7d35aa015e30c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>steer_degree_limit</name>
+      <anchorfile>classjoy__interface.html</anchorfile>
+      <anchor>a01122cae6a2ee85bc1799a00ac5f6f5e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>t_equation</name>
+      <anchorfile>classjoy__interface.html</anchorfile>
+      <anchor>ab7f148200bd20fdf35efd7cf9d02a36d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>steer_target_value0</name>
+      <anchorfile>classjoy__interface.html</anchorfile>
+      <anchor>aba03c2af772f8de7cc32e0368df2af3c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>timestamp_t</type>
+      <name>speed_time_last</name>
+      <anchorfile>classjoy__interface.html</anchorfile>
+      <anchor>a1dbd0ed8868bd3d666e2e1593d4707d9</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Joystick</name>
+    <filename>class_joystick.html</filename>
+    <member kind="function">
+      <type>int</type>
+      <name>main</name>
+      <anchorfile>class_joystick.html</anchorfile>
+      <anchor>a2abe480710fd58e8e61a0b2a23e40ec2</anchor>
+      <arglist>(int argc, char **argv)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>keyboard_interface</name>
+    <filename>classkeyboard__interface.html</filename>
+    <member kind="variable">
+      <type>double</type>
+      <name>step_size</name>
+      <anchorfile>classkeyboard__interface.html</anchorfile>
+      <anchor>a28ed645cd58c478a80b35d90fc96ad46</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>input_mode</name>
+      <anchorfile>classkeyboard__interface.html</anchorfile>
+      <anchor>aa231e472e2adf010e9c341e62804b33d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>geometry_msgs::Twist</type>
+      <name>control_input</name>
+      <anchorfile>classkeyboard__interface.html</anchorfile>
+      <anchor>a348e785c7c8855fe5770364052b7a02c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>keyboard_interface</name>
+      <anchorfile>classkeyboard__interface.html</anchorfile>
+      <anchor>aa6ffbea8e7d719a41b659ce6c08935da</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>keyLoop</name>
+      <anchorfile>classkeyboard__interface.html</anchorfile>
+      <anchor>a4bf47e60489a9459d630e0b45583e864</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>init</name>
+      <anchorfile>classkeyboard__interface.html</anchorfile>
+      <anchor>ad7cbd46e6fad7d0f0a534948fe3268a3</anchor>
+      <arglist>(const char *controller_settings_file_path)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>reset_state</name>
+      <anchorfile>classkeyboard__interface.html</anchorfile>
+      <anchor>a2fdf36aca7e520ceb5432228a5818c41</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>print_state</name>
+      <anchorfile>classkeyboard__interface.html</anchorfile>
+      <anchor>a43af5419ec27639c5f7fb7b6d233ddf7</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>logger</name>
+    <filename>classlogger.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>open_file</name>
+      <anchorfile>classlogger.html</anchorfile>
+      <anchor>a03130fe8c98fdb5e6551356eba57268f</anchor>
+      <arglist>(const char *filepath)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>print_canfdframe_to_file</name>
+      <anchorfile>classlogger.html</anchorfile>
+      <anchor>a20cd4134066e437ef15935f4a7abf64d</anchor>
+      <arglist>(canfd_frame temp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>print_canframe_to_file</name>
+      <anchorfile>classlogger.html</anchorfile>
+      <anchor>aa7ae3a828e0612822f4c837721e4c352</anchor>
+      <arglist>(can_frame temp)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>print_strmessage_to_file</name>
+      <anchorfile>classlogger.html</anchorfile>
+      <anchor>a222b34390fccf19bfe0b935369705f20</anchor>
+      <arglist>(const char *data)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>print_newline_to_file</name>
+      <anchorfile>classlogger.html</anchorfile>
+      <anchor>ad983b220ebd8bcd0fd67fe0fe07559c1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>close_file</name>
+      <anchorfile>classlogger.html</anchorfile>
+      <anchor>a06ce36982f0a6450436080897d8e9033</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable">
+      <type>std::ofstream</type>
+      <name>myfile</name>
+      <anchorfile>classlogger.html</anchorfile>
+      <anchor>a327e8db269a9dc8642fc646fd6a27abc</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>mm_controller</name>
+    <filename>classmm__controller.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>changeGear</name>
+      <anchorfile>classmm__controller.html</anchorfile>
+      <anchor>ab43273ee82d53e607ccf448a19a53166</anchor>
+      <arglist>(std::string targetGear)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>calc_pedal_press_value</name>
+      <anchorfile>classmm__controller.html</anchorfile>
+      <anchor>ac31754ea0b7f19d38c2ebcff9a51deba</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>calc_brake_press_value</name>
+      <anchorfile>classmm__controller.html</anchorfile>
+      <anchor>a0a631f9d58183688d995222e23ed8c3b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>get_brake_lookup</name>
+      <anchorfile>classmm__controller.html</anchorfile>
+      <anchor>a57463750c6156cc709907b14fd393cca</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>polynomial_func</name>
+      <anchorfile>classmm__controller.html</anchorfile>
+      <anchor>a56e4262c75e0762733568c3fd103b5b2</anchor>
+      <arglist>(double input_velocity)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>initialize</name>
+      <anchorfile>classmm__controller.html</anchorfile>
+      <anchor>ab4cfb071f1148d514ca68e9fe7878873</anchor>
+      <arglist>(const char *controller_settings_file_path)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>update_setpoint</name>
+      <anchorfile>classmm__controller.html</anchorfile>
+      <anchor>a8ec45ca3ee56a6af2dda6ca9e4707f48</anchor>
+      <arglist>(const geometry_msgs::Twist::ConstPtr &amp;msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>update_steer</name>
+      <anchorfile>classmm__controller.html</anchorfile>
+      <anchor>afa3fc4267bc60aa8b216ff6532b033f1</anchor>
+      <arglist>(int setpoint_steer)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>update_pid_gains_throttle</name>
+      <anchorfile>classmm__controller.html</anchorfile>
+      <anchor>ac2e51cd3bb60a364109fc512b7bc67c0</anchor>
+      <arglist>(const mid_level_controller::PID_Gains::ConstPtr &amp;msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>update_pid_gains_brake</name>
+      <anchorfile>classmm__controller.html</anchorfile>
+      <anchor>ad286d32991c32077e36c7b58ce982859</anchor>
+      <arglist>(const mid_level_controller::PID_Gains::ConstPtr &amp;msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>chatterCallback</name>
+      <anchorfile>classmm__controller.html</anchorfile>
+      <anchor>a9a19fd840b8bebe0fbe640678858f228</anchor>
+      <arglist>(const mid_level_controller::Can_Status_Message::ConstPtr &amp;msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>read_settings</name>
+      <anchorfile>classmm__controller.html</anchorfile>
+      <anchor>a7b25fdc81fe30da8255470f9a9741eda</anchor>
+      <arglist>(const char *testing_settings_file_path)</arglist>
+    </member>
+    <member kind="variable">
+      <type>char *</type>
+      <name>controller_settings_file_path</name>
+      <anchorfile>classmm__controller.html</anchorfile>
+      <anchor>a3d074b97956e5cf6ca83df5d31589e7a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>updated</name>
+      <anchorfile>classmm__controller.html</anchorfile>
+      <anchor>a6ce57a561ae2ba0edb2343382d9ce463</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>brake_press</name>
+      <anchorfile>classmm__controller.html</anchorfile>
+      <anchor>a3cb1c7818d73ccebe3c0b48f7eeca857</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>steer_direction_multiplier</name>
+      <anchorfile>classmm__controller.html</anchorfile>
+      <anchor>ac5535e2521aa3b176dd7b3bf80101531</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>volatile double</type>
+      <name>setpoint_steer</name>
+      <anchorfile>classmm__controller.html</anchorfile>
+      <anchor>ac8dfe3d1d7991f982f6064a82f4f3beb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>polynimial_coefficients</name>
+      <anchorfile>classmm__controller.html</anchorfile>
+      <anchor>a17671c0e4b6486f5a8fe19d1331147ef</anchor>
+      <arglist>[6]</arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>input_brake_target0</name>
+      <anchorfile>classmm__controller.html</anchorfile>
+      <anchor>ae67f9b6f0ee00a6776e1608e9fa5e7dd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>throttle_limit</name>
+      <anchorfile>classmm__controller.html</anchorfile>
+      <anchor>a7efde09bdc159e6a33d6d1594bbaf989</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>brake_limit</name>
+      <anchorfile>classmm__controller.html</anchorfile>
+      <anchor>ab5b9086d26afce28ac07381514f8db69</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>throttle_values</name>
+      <anchorfile>classmm__controller.html</anchorfile>
+      <anchor>a002c44f8811db8ff903c49678ce94a66</anchor>
+      <arglist>[throttle_value_count]</arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>throttle_reverse_values</name>
+      <anchorfile>classmm__controller.html</anchorfile>
+      <anchor>a994ef9e03c1fad5b9efe0edb3876dee3</anchor>
+      <arglist>[throttle_value_reverse_count]</arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>throttle_boost_values</name>
+      <anchorfile>classmm__controller.html</anchorfile>
+      <anchor>afc47a5e5fc22f5c957c2fc2aaa1c8c52</anchor>
+      <arglist>[throttle_value_boost_count]</arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>braking_values_lookup</name>
+      <anchorfile>classmm__controller.html</anchorfile>
+      <anchor>a0ff97dab3ec29d22f88aae261a201a28</anchor>
+      <arglist>[19][19]</arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>time_diff</name>
+      <anchorfile>classmm__controller.html</anchorfile>
+      <anchor>aa751873d80f75153eb652b74f92f0d21</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>watch_dog_time_diff</name>
+      <anchorfile>classmm__controller.html</anchorfile>
+      <anchor>a4424565bc7239c3f9a31292c7ae0156a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>gear_current</name>
+      <anchorfile>classmm__controller.html</anchorfile>
+      <anchor>a1886de5418800a5f174ab582f24c61da</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>braking_distance</name>
+      <anchorfile>classmm__controller.html</anchorfile>
+      <anchor>ab5302f403a66aa7128e5382d263b9b64</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>geometry_msgs::Twist</type>
+      <name>zero_speed</name>
+      <anchorfile>classmm__controller.html</anchorfile>
+      <anchor>a970752dc347901891932705fa373ec2b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>enable_update_pid_flag</name>
+      <anchorfile>classmm__controller.html</anchorfile>
+      <anchor>aa08586c4b01b43141754451a47d1d5cb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>ros::Publisher</type>
+      <name>control_pub</name>
+      <anchorfile>classmm__controller.html</anchorfile>
+      <anchor>aeb3d31ac25cf3961045cab29887ce716</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>volatile int</type>
+      <name>steer_in</name>
+      <anchorfile>classmm__controller.html</anchorfile>
+      <anchor>ad0391f0a1af6318682096402d017dbc1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>Kp</name>
+      <anchorfile>classmm__controller.html</anchorfile>
+      <anchor>afc3fd9a7bf75d50943c74aee591a9894</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>Kp_brake</name>
+      <anchorfile>classmm__controller.html</anchorfile>
+      <anchor>a24f10e988a2ba9c296307b4b2d21d9cc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>accln_commanded</name>
+      <anchorfile>classmm__controller.html</anchorfile>
+      <anchor>ac18e1913efc8f65b3f602e466cb8c37f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>error_brake_sum</name>
+      <anchorfile>classmm__controller.html</anchorfile>
+      <anchor>abd42300a7823c0d8019e375fef8a583b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>pedal_press</name>
+      <anchorfile>classmm__controller.html</anchorfile>
+      <anchor>ac55089e2fe6edfe41b312e619fa4aab1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>lookup_enable</name>
+      <anchorfile>classmm__controller.html</anchorfile>
+      <anchor>a657dae6bbd4a741da2c00c30bcc4d81e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>volatile double</type>
+      <name>setpoint_speed</name>
+      <anchorfile>classmm__controller.html</anchorfile>
+      <anchor>ad60f91cab7413711004200b4d1c1f821</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>timestamp_t</type>
+      <name>start_time</name>
+      <anchorfile>classmm__controller.html</anchorfile>
+      <anchor>ae5647015cd49636c270c43d33bcd8483</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>timestamp_t</type>
+      <name>watch_dog_time_last</name>
+      <anchorfile>classmm__controller.html</anchorfile>
+      <anchor>a39de83337c0707bc01e2df1e48d4a3f2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>debug_enable</name>
+      <anchorfile>classmm__controller.html</anchorfile>
+      <anchor>ae680b740d453af1020dafeeae49d90d1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>velocity_input_units</name>
+      <anchorfile>classmm__controller.html</anchorfile>
+      <anchor>a8cc62a491fc3a95ebcccca1cddfb1811</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>vel_limit</name>
+      <anchorfile>classmm__controller.html</anchorfile>
+      <anchor>ae199e954990085805d50b879e3aebddc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>calc_target_velocity_achievement_time</name>
+      <anchorfile>classmm__controller.html</anchorfile>
+      <anchor>aec9918df632b4a2063ef859d40758e16</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static const int</type>
+      <name>throttle_value_count</name>
+      <anchorfile>classmm__controller.html</anchorfile>
+      <anchor>a1fe8aa2239f775195d8944493114429c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static const int</type>
+      <name>throttle_value_reverse_count</name>
+      <anchorfile>classmm__controller.html</anchorfile>
+      <anchor>a327e12f346bd8b986e6585560433a7d6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static const int</type>
+      <name>throttle_value_boost_count</name>
+      <anchorfile>classmm__controller.html</anchorfile>
+      <anchor>a82e4a81e7aa30394c6227d1525d98e51</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>output_msg</name>
+    <filename>structoutput__msg.html</filename>
+    <member kind="variable">
+      <type>std::vector&lt; std::string &gt;</type>
+      <name>topic</name>
+      <anchorfile>structoutput__msg.html</anchorfile>
+      <anchor>a051d388e2ad2a8e8c6b80f2e6999cea5</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="dir">
+    <name>/mathworks/home/dggoel/catkin_ws/src/swahana/mid_level_controller/src/can_driver</name>
+    <path>/mathworks/home/dggoel/catkin_ws/src/swahana/mid_level_controller/src/can_driver/</path>
+    <filename>dir_c473c7c391f8790e4ff2bccca5fe736c.html</filename>
+    <file>can_bus.cpp</file>
+    <file>can_receiver.cpp</file>
+    <file>can_receiver_vehicle.cpp</file>
+    <file>can_settings_reader.cpp</file>
+    <file>can_transmitter.cpp</file>
+    <file>can_yaml_parser.cpp</file>
+    <file>logger.cpp</file>
+  </compound>
+  <compound kind="dir">
+    <name>/mathworks/home/dggoel/catkin_ws/src/swahana/mid_level_controller/include/can_driver</name>
+    <path>/mathworks/home/dggoel/catkin_ws/src/swahana/mid_level_controller/include/can_driver/</path>
+    <filename>dir_96cfe5db418439b56df3287efd2908e0.html</filename>
+    <file>can_bus.hpp</file>
+    <file>can_receiver.hpp</file>
+    <file>can_receiver_vehicle.hpp</file>
+    <file>can_settings_reader.hpp</file>
+    <file>can_transmitter.hpp</file>
+    <file>can_yaml_parser.hpp</file>
+    <file>logger.hpp</file>
+  </compound>
+  <compound kind="dir">
+    <name>/mathworks/home/dggoel/catkin_ws/src/swahana/mid_level_controller/src/controller</name>
+    <path>/mathworks/home/dggoel/catkin_ws/src/swahana/mid_level_controller/src/controller/</path>
+    <filename>dir_41ef5d8a90b9cc03a02949a5c062e6f0.html</filename>
+    <file>controller_settings_reader.cpp</file>
+    <file>mm_controller.cpp</file>
+  </compound>
+  <compound kind="dir">
+    <name>/mathworks/home/dggoel/catkin_ws/src/swahana/mid_level_controller/include/controller</name>
+    <path>/mathworks/home/dggoel/catkin_ws/src/swahana/mid_level_controller/include/controller/</path>
+    <filename>dir_39b9d54b040febeebc00140e5c10ba61.html</filename>
+    <file>controller_settings_reader.hpp</file>
+    <file>mm_controller.hpp</file>
+  </compound>
+  <compound kind="dir">
+    <name>/mathworks/home/dggoel/catkin_ws/src/swahana/mid_level_controller/include</name>
+    <path>/mathworks/home/dggoel/catkin_ws/src/swahana/mid_level_controller/include/</path>
+    <filename>dir_d44c64559bbebec7f509842c48db8b23.html</filename>
+    <dir>/mathworks/home/dggoel/catkin_ws/src/swahana/mid_level_controller/include/can_driver</dir>
+    <dir>/mathworks/home/dggoel/catkin_ws/src/swahana/mid_level_controller/include/controller</dir>
+    <dir>/mathworks/home/dggoel/catkin_ws/src/swahana/mid_level_controller/include/interfaces</dir>
+  </compound>
+  <compound kind="dir">
+    <name>/mathworks/home/dggoel/catkin_ws/src/swahana/mid_level_controller/src/interfaces</name>
+    <path>/mathworks/home/dggoel/catkin_ws/src/swahana/mid_level_controller/src/interfaces/</path>
+    <filename>dir_ee3f1a7951c308657a65f8199076c1d6.html</filename>
+    <file>interface.cpp</file>
+    <file>joy_interface_adv_trajectory.cpp</file>
+    <file>joy_node.cpp</file>
+    <file>keyboard_interface.cpp</file>
+  </compound>
+  <compound kind="dir">
+    <name>/mathworks/home/dggoel/catkin_ws/src/swahana/mid_level_controller/include/interfaces</name>
+    <path>/mathworks/home/dggoel/catkin_ws/src/swahana/mid_level_controller/include/interfaces/</path>
+    <filename>dir_b6a1b25c97174b03ee33ad89b32089b9.html</filename>
+    <file>interface.hpp</file>
+    <file>joy_interface.hpp</file>
+    <file>keyboard_interface.hpp</file>
+  </compound>
+  <compound kind="dir">
+    <name>/mathworks/home/dggoel/catkin_ws/src/swahana/mid_level_controller/src</name>
+    <path>/mathworks/home/dggoel/catkin_ws/src/swahana/mid_level_controller/src/</path>
+    <filename>dir_68267d1309a1af8e8297ef4c3efbcdba.html</filename>
+    <dir>/mathworks/home/dggoel/catkin_ws/src/swahana/mid_level_controller/src/can_driver</dir>
+    <dir>/mathworks/home/dggoel/catkin_ws/src/swahana/mid_level_controller/src/controller</dir>
+    <dir>/mathworks/home/dggoel/catkin_ws/src/swahana/mid_level_controller/src/interfaces</dir>
+  </compound>
+</tagfile>

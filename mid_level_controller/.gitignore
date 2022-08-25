@@ -1,0 +1,15 @@
+readme/html/*
+readme/latex/*
+readme/*.db
+readme/doxygenGeneratedDocs/html/*
+readme/doxygenGeneratedDocs/latex/*
+readme/doxygenGeneratedDocs/*.db
+include/mid_level_controller/config.h
+cfg/settings.cfg
+scripts/PlotterData.txt
+*~
+*.pyc
+*.tmp
+*.log
+*.sho
+*.swo
